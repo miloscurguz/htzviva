@@ -1,0 +1,367 @@
+﻿@page
+@model viva.webstore.Pages.Cart.IndexModel
+@{
+    string noCartClassHide = "";
+    string hasCartClassHide = "";
+    if (Model.VM.items.Count == 0)
+    {
+        noCartClassHide = "hide";
+    }
+    else
+    {
+        hasCartClassHide = "hide";
+    }
+    ViewData["Title"] = "Korpa";
+}
+<style>
+    .cart-policy .policy .policy-icon {
+        color: #000000;
+        background: #000000;
+    }
+</style>
+@Html.AntiForgeryToken()
+
+
+<div class="pagecontent shopping-cart template-cart">
+    <div class="container">
+        <div id="shopify-section-template--15813930778853__cart-template" class="shopify-section">
+            <h1>Korpa</h1>
+            <cart-template class="page-width col-sm-8 @noCartClassHide">
+                    <div class="main-cart">
+                        <form action="/cart" method="post" novalidate class="cart cart-wrapper" id="cart">
+                            <div class="cart-table" id="main-cart-items" data-id="template--15813930778853__cart-template">
+                                <div class="table-responsive js-contents">
+                                    <table class="shop_table cart_table cart-items">
+                                        <thead class="cart__row cart__row--heading">
+                                        <th scope="col">Ukloni</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Naziv</th>
+                                        <th scope="col">Cena</th>
+                                        <th scope="col">Količina</th>
+                                        <th scope="col">Ukupno</th>
+                                        </thead>
+                                        <tbody>
+                                            @{
+                                                var i = 1;
+                                            }
+                                            @foreach (var item in Model.VM.items)
+                                            {
+
+                                                <tr class="cart__row cart-item" id="CartItem-@item.id">
+                                                    <td class="cart__meta small--text-center">
+                                                        <cart-remove-button class="cart__remove" id="Remove-@item.id" data-index="@item.id">
+                                                            <a href="/cart/change?id=42655691899109:3453d1995daf6934eac0713427ce7beb&quantity=0" class="text-link text-link--accent" aria-label="Remove" data-role="product-remove"><i class="mdi mdi-delete"></i></a>
+                                                        </cart-remove-button>
+                                                    </td>
+                                                    <td class="cart__meta small--text-left">
+                                                        <div class="cart__image-wrapper grid-item medium--two-fifths large--one-fifth text-center product_img">
+                                                            <img loading="lazy" class="cart__image" src="@item.image" alt="@item.title">
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart__meta small--text-left product-name">
+                                                        <div class="cart__product-information">
+                                                            <div class="cart-content">
+                                                                <div class="list-view-item__title">
+                                                                <a asp-page="/product/index" asp-route-id="@item.product_id" asp-route-model="false" class="cart__product-title">
+                                                                        @item.product_title
+                                                                    </a><br/>
+                                                                    <strong>Boja: </strong><span>@item.product_color</span><br/>
+                                                                <strong>Velicina: </strong><span>@item.product_size</span><br />
+                                                                </div>
+                                                              @*  <ul class="product-details" aria-label="Product Detail">
+                                                                    <li class="product-details__item product-details__item--variant-option">Color: White</li>
+                                                                    <li class="product-details__item product-details__item--property ">
+
+                                                                    </li>
+                                                                    <li class="product-details__item product-details__item--property hide">
+                                                                        <span class="product-details__item-label">t: </span>
+                                                                        <span>
+                                                                            e
+                                                                        </span>
+                                                                    </li>
+                                                                </ul>*@
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart__price">
+                                                        <div class="product-price">
+                                                            <dl>
+                                                            @*    <div class="hide">
+                                                                    <dt>
+                                                                        <span class="visually-hidden">Regular price</span>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        <s><span class=money>$780.00</span></s>
+                                                                    </dd>
+                                                                    <dt>
+                                                                        <span class="visually-hidden">Sale price</span>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        <span class="order-discount"><span class=money>$780.00</span></span>
+                                                                    </dd>
+                                                                </div>*@
+                                                                <div>
+                                                                    <dt>
+                                                                        <span class="visually-hidden">Cena</span>
+                                                                    </dt>
+                                                                    <dd>
+                                                                    <span class=money>@String.Format("{0:N}",item.price) RSD.</span>
+                                                                    </dd>
+                                                                </div>
+                                                            @*    <div class="hide">
+                                                                    <dt>
+                                                                        <span class="visually-hidden visually-hidden--inline">Unit price</span>
+                                                                    </dt>
+                                                                    <dd>
+                                                                        <span class="price-unit-price">
+                                                                            <span></span><span aria-hidden="true">/</span><span class="visually-hidden">per&nbsp;</span><span>
+                                                                            </span>
+                                                                        </span>
+                                                                    </dd>
+                                                                </div>*@
+                                                            </dl>
+                                                        </div><ul class="order-discount order-discount--list order-discount--title order-discount--cart hide" aria-label="Discount">
+                                                            <li class="order-discount__item">
+                                                                <span></span> (-<span></span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile" role="alert" id="Line-item-error-@item.id">
+                                                            <span class="visually-hidden">Error </span>
+                                                            <span class="cart__qty-error-message"></span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart__quantity-td">
+                                                        <div class="cart__qty">
+                                                            <label for="Quantity-@item.id" class="cart__qty-label">Kol.</label>
+                                                            <quantity-input class="quantity cart-qty-box-set">
+                                                                <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                                                    <span class="visually-hidden">translation missing: en.products.product.decrease</span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" fill="none" viewBox="0 0 10 2">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor" />
+                                                                    </svg>
+                                                                </button>
+                                                                <input class="quantity__input cart__qty-input quantity"
+                                                               type="number"
+                                                               name="updates[]"
+                                                               value="@item.quantity"
+                                                               min="0"
+                                                               aria-label="translation missing: en.products.product.input_label"
+                                                               id="Quantity-@item.id"
+                                                               data-index="@item.id">
+                                                                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                                                    <span class="visually-hidden">translation missing: en.products.product.increase</span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor" />
+                                                                    </svg>
+                                                                </button>
+                                                            </quantity-input>
+                                                        </div>
+                                                        <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--desktop hide" role="alert">
+                                                            <span class="visually-hidden">Error </span>
+                                                            <span class="cart__qty-error-message"></span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart__final-price text-right">
+                                                        <div class="loading-overlay hidden">
+                                                            <div class="loading-overlay__spinner">
+                                                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cart-item__price-wrapper">
+                                                        <span id="cart-item-final-price-@item.id" class=money>@String.Format("{0:N}",item.final_price) RSD.</span>
+                                                        </div>
+                                                     @*   <dl class="hide">
+                                                            <dt>
+                                                                <span class="visually-hidden">Regular total</span>
+                                                            </dt>
+                                                            <dd>
+                                                                <s><span class=money>$2,340.00</span></s>
+                                                            </dd>
+                                                            <dt>
+                                                                <span class="visually-hidden">Discounted total</span>
+                                                            </dt>
+                                                            <dd>
+                                                                <span class="order-discount"><span class=money>$2,340.00</span></span>
+                                                            </dd>
+                                                        </dl>*@
+                                                    </td>
+                                                </tr>
+                                            }
+                                  
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
+                            <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status"></p>
+                        </form>
+                    </div>
+                </cart-template>
+           
+          
+            <div id="cartEmpty" class="empty-page-content text-center @hasCartClassHide">
+                <h1 class="cart__title tt-innerpagetitle">KORPA</h1>
+                <div class="cart--cookie-message">
+                    <p>Omogućite kolačiće (cookies) u vašem pretraživaču da bi mogli da korsitite korpu!</p>
+                </div>
+                <div class="empty-carticon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280.028 280.028" width="50" height="50">
+                        <path class="c-01" d="M35.004 0h210.02v78.758H35.004V0z" fill="#f55112"></path>
+                        <path class="c-02" d="M262.527 61.256v201.27c0 9.626-7.876 17.502-17.502 17.502H35.004c-9.626 0-17.502-7.876-17.502-17.502V61.256h245.025z" fill="#f04706"></path>
+                        <path class="c-03" d="M35.004 70.007h26.253V26.253L35.004 0v70.007zm183.767-43.754v43.754h26.253V0l-26.253 26.253z" fill="#f04706"></path>
+                        <path class="c-04" d="M61.257 61.256V26.253L17.503 61.256h43.754zm157.514-35.003v35.003h43.754l-43.754-35.003z" fill="#f55112"></path>
+                        <path class="c-05" d="M65.632 105.01c-5.251 0-8.751 3.5-8.751 8.751s3.5 8.751 8.751 8.751 8.751-3.5 8.751-8.751c0-5.25-3.5-8.751-8.751-8.751zm148.764 0c-5.251 0-8.751 3.5-8.751 8.751s3.5 8.751 8.751 8.751 8.751-3.5 8.751-8.751c.001-5.25-3.501-8.751-8.751-8.751z" fill="#f04706"></path>
+                        <path class="c-06" d="M65.632 121.637c5.251 0 6.126 6.126 6.126 6.126 0 39.379 29.753 70.882 68.257 70.882s68.257-31.503 68.257-70.882c0 0 .875-6.126 6.126-6.126s6.126 6.126 6.126 6.126c0 46.38-35.003 83.133-80.508 83.133s-80.508-37.629-80.508-83.133c-.001-.001.874-6.126 6.124-6.126z" fill="#f04706"></path>
+                        <path class="c-07" d="M65.632 112.886c5.251 0 6.126 6.126 6.126 6.126 0 39.379 29.753 70.882 68.257 70.882s68.257-31.503 68.257-70.882c0 0 .875-6.126 6.126-6.126s6.126 6.126 6.126 6.126c0 46.38-35.003 83.133-80.508 83.133s-80.508-37.629-80.508-83.133c-.001 0 .874-6.126 6.124-6.126z" fill="#fdfbf7"></path>
+                    </svg>
+                </div>
+                <p class="cart--continue-message">Vaša korpa je tenutno prazna.</p>
+            </div>
+
+        
+        </div>
+        <div id="shopify-section-template--15813930778853__cart-footer" class="shopify-section cart__footer-wrapper">
+            <div class="page-width col-sm-4 @noCartClassHide" id="cart-footer" data-id="template--15813930778853__cart-footer">
+                <div class="cart__footer">
+                        <div class="js-contents">
+                            <div class="totals">
+                                <h3 class="totals__subtotal">Ukupno u korpi</h3>
+                            <p class="totals__subtotal-value"><span id="cart_total" class=money>@String.Format("{0:N}",Model.VM.total_price) RSD.</span></p>
+                            </div><p class="tax-note caption-large rte">Troškovi isporuke i takse će biti izračunate u nastavku. </p>
+                        </div>
+
+
+                       @* <p style="float: none; clear: both; margin: 10px 0 0;" class="cart_condition">
+                            <input style="float:none; vertical-align: middle;" type="checkbox" id="agree" />
+                            <label style="display:inline; float:none" for="agree">
+                                I agree with the <a href="/pages/terms-condition">terms and conditions</a>.
+                            </label>
+                        </p>
+*@
+                        <div class="cart__ctas">
+                           @* <noscript>
+                                <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                                    Update Cart
+                                </button>
+                            </noscript>*@
+
+                            <a asp-page="/Cart/Shipping" type="button" id="checkout" class="cart__checkout-button button btn" name="checkout" form="cart">
+                              NASTAVI NA PLAĆANJE
+                            </a>
+                        </div>
+                        <div id="cart-errors"></div>
+                    </div>
+                       <div class="cart-policy">
+                    <div class="policy">
+                        <div id="icon-655603c2-0421-44a9-84eb-e0c2b277953c" class="policy-icon">
+                        </div>
+                        <div class="content">
+                            <div class="policy-title">Sigurnost podataka</div>
+                            <div class="policy-desc">Vaši lični podaci su zaštićeni.</div>
+                        </div>
+                        <style>
+                            .cart-policy .policy #icon-655603c2-0421-44a9-84eb-e0c2b277953c.policy-icon {
+                                mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-01_40x40.png?v=1650445355);
+                                -webkit-mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-01_40x40.png?v=1650445355);
+                            }
+                        </style>
+                    </div>
+                    <div class="policy">
+                        <div id="icon-cc231b2d-d537-47e2-ba2f-70d157bca4e5" class="policy-icon">
+                        </div>
+                        <div class="content">
+                            <div class="policy-title">Isporuka</div>
+                            <div class="policy-desc">Troškovi isporuke su besplatni za narudžbine preko 5.000,00 rsd.</div>
+                        </div>
+                        <style>
+                            .cart-policy .policy #icon-cc231b2d-d537-47e2-ba2f-70d157bca4e5.policy-icon {
+                                mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-02_40x40.png?v=1650445367);
+                                -webkit-mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-02_40x40.png?v=1650445367);
+                            }
+                        </style>
+                    </div>
+                    <div class="security-bg">
+
+                        <div class="security-text">
+                            <div class="payment-security">Pravna lica</div>
+                            <div class="payment-sec-cnt col-sm-12">
+                                <img loading="lazy" height="50px" width="50px" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/05_50x50.png?v=1647422989" alt="service img">
+                                <div class="security-content">
+                                    <div class="security-title"> Pravna lica nas mogu kontaktirati radi ostvarivanja popusta.</div>
+                                    <div class="security-subtitle">Pozovite nas 08h do 16h <br />013 402 840</div>
+                                </div>
+                            </div>
+  
+                        </div>
+                    </div>
+
+
+                </div>
+                </div>
+             
+            </div>
+            @section Scripts{
+                <script>
+                    window.routes = {
+                        cart_add_url: '/cart/add',
+                        cart_change_url: 'Cart/Index/?handler=Change',
+                        cart_update_url: '/cart/update'
+                    };
+                    window.cartStrings = {
+                        error: `translation missing: en.cart.general.cart_error`
+                    }
+                    window.variantStrings = {
+                        addToCart: `ADD TO CART`,
+                        soldOut: `SOLD OUT`,
+                        unavailable: `Unavailable`,
+                    }
+                    window.accessibilityStrings = {
+                        shareSuccess: `translation missing: en.general.share.success_message`,
+                    }
+                </script>
+                <script>
+                    $(document).ready(function () {
+                        //$('body').on('click', '[name="checkout"]', function () {
+                        //    if ($('#agree').is(':checked')) {
+                        //        $(this).submit();
+                        //    }
+                        //    else {
+                        //        alert("You must agree with the terms and conditions of sales to check out.");
+                        //        return false;
+                        //    }
+                        //});
+                    });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        function isIE() {
+                            const ua = window.navigator.userAgent;
+                            const msie = ua.indexOf('MSIE ');
+                            const trident = ua.indexOf('Trident/');
+
+                            return (msie > 0 || trident > 0);
+                        }
+
+                        if (!isIE()) return;
+                        const cartSubmitInput = document.createElement('input');
+                        cartSubmitInput.setAttribute('name', 'checkout');
+                        cartSubmitInput.setAttribute('type', 'hidden');
+                        document.querySelector('#cart').appendChild(cartSubmitInput);
+                        document.querySelector('#checkout').addEventListener('click', function (event) {
+                            document.querySelector('#cart').submit();
+                        });
+                    });
+                </script>
+            }
+            
+
+
+        </div>
+
+
+    </div>
+
+
+
+</div>

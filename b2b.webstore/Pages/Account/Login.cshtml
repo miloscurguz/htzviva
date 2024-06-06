@@ -1,0 +1,125 @@
+﻿@page
+@model viva.webstore.Pages.Account.LoginModel
+@{
+}
+<div class="breadcrumb-wrap">
+    <div class="container">
+
+        <span class="title">Account</span>
+        <div class="breadcrumb">
+            <a href="/" title="Back to the frontpage"><i class="mdi mdi-home-outline"></i></a>
+
+            <span aria-hidden="true" class="breadcrumb__sep">&gt;</span>
+            <span>Account</span>
+        </div>
+
+    </div>
+</div>
+
+<div class="pagecontent">
+
+
+
+    <div class="grid">
+
+        <div class="container">
+            <div class="row">
+                <div class="login col-sm-12">
+                    <div class="login-page">
+
+                        <div class="note form-success" id="resetSuccess" style="display:none;">
+                          Poslali smo Vam email sa linkom za promenu šifre.
+                        </div>
+
+                        <h1 class="tt-innerpagetitle">Prijava</h1>
+
+
+                        <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8" data-login-with-shop-sign-in="true">
+                            <input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+
+
+
+                            <label for="customer_email" class="form-label--hidden">
+                                Email
+                                <span>
+                                    *
+                                </span>
+                            </label>
+                            <input type="email" name="customer[email]" id="customer_email" required="required" placeholder="Email" autocorrect="off" autocapitalize="off" autofocus="">
+
+
+
+                            <label for="customer_password" class="form-label--hidden">
+                                Šifra
+                                <span>
+                                    *
+                                </span>
+                            </label>
+                            <input type="password" value="" name="customer[password]" required="required" id="customer_password" placeholder="Password">
+
+                            <div class="grid">
+                                <div class="grid-item one-half padding_0 forgot_pwd">
+                                    <a href="#" onclick="showRecoverPasswordForm();return false;">Zaboravili ste šifru?</a>
+                                </div>
+                                <div class="grid-item one-half text-right create_account_wrap">
+                                    <a href="/account/register" id="customer_register_link">Napravite nalog</a>
+                                </div>
+
+                            </div>
+
+
+                            <div class="text-center">
+                                <input type="submit" class="btn" value="Uloguj se">
+                            </div>
+
+                        </form>
+
+
+                        <div id="recover_password" style="display: none;">
+
+                            <h2 class="tt-innerpagetitle">Promeni šifru</h2>
+                            <p> Poslali smo Vam email za promenu šifre.</p>
+
+
+                            <form method="post" action="/account/recover" accept-charset="UTF-8">
+                                <input type="hidden" name="form_type" value="recover_customer_password"><input type="hidden" name="utf8" value="✓">
+
+
+
+
+
+
+                                <label for="recover-email" class="form-label--hidden">
+                                    Email
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <input type="email" value="" name="email" required="required" id="recover-email" placeholder="Email" autocorrect="off" autocapitalize="off">
+
+                                <div class="text-center">
+                                    <input type="submit" class="btn" value="Pošalji">
+                                    <a href="#" class="btn" onclick="hideRecoverPasswordForm();return false;">Odustani</a>
+                                </div>
+                            </form>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRecoverPasswordForm() { document.getElementById('recover_password').style.display = 'block'; document.getElementById('customer_login').style.display = 'none' }
+        function hideRecoverPasswordForm() { document.getElementById('recover_password').style.display = 'none'; document.getElementById('customer_login').style.display = 'block' }
+        if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+    </script>
+</div>
+
+

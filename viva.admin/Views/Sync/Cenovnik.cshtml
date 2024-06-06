@@ -1,0 +1,15 @@
+﻿@model viva.admin.Models.Sync.SyncCenovnikViewModel
+@{
+    ViewData["Title"] = "Cenovnik";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cenovnik</h1>
+
+@using (Html.BeginForm("Cenovnik", "Sync", FormMethod.Post, new { @id = "mainForm" }))
+{
+    @Html.HiddenFor(model=>model.TipCenovnika)
+    ;
+    <button type="submit">Sync</button>
+}
+

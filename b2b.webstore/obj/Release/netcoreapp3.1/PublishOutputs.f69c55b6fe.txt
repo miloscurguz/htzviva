@@ -1,0 +1,255 @@
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.exe
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\animate.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\aos.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\bootstrap.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\lightbox.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\magnific-popup.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\materialdesignicons.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\owl.carousel.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\site.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\slick.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\theme.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\favicon.ico
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\files\Izjava_o_odustanku_od_ugovora_na_daljinu.pdf
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\fonts\materialdesignicons-webfont.eot
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\fonts\materialdesignicons-webfont.svg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\fonts\materialdesignicons-webfont.ttf
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\fonts\materialdesignicons-webfont.woff
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\fonts\materialdesignicons-webfont.woff2
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\23101.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\3dots.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\about\about-us-01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\about\about-us-02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\APP\01.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\APP\02.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\banner-001.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\banner-01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\banner-02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\banner-03.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\banner-04.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\banner-05.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Blog-images\01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Blog-images\02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Blog-images\03.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Blog-images\04.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Blog-images\05.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Blog-images\06.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\01.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\02.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\03.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\04.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\05.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\06.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\07.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\3m.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\atg.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\jsp.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\brand logo\Protekt.JPG
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-banner.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Cameras.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Computer & Laptop.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Furniture.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Gaming.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Headphones.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Home Speaker.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Jewelry.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Kids Toys.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Kitchen.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Mobile & Tablets.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Shoes.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-feature\Stationery.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-slider\category-slider-banner-01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-slider\category-slider-banner-02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\category-slider\category-slider-banner-03.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\cizma.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\clock.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Clock.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\ear__prod_wide_desktop.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\faq.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\HTZ VIVA Logo_Normal.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\HTZ VIVA Logo_White.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\img - Shortcut.lnk
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\karabiner.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\katalog.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\left-banner.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\logo_ico.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\logo_viva.PNG
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\mask.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\maska.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\maska_oci.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Audio Player\menu-banner-04.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Audio Player\menu-banner-05.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Catalog\menu-banner-01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Headphones\menu-banner-08.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Headphones\menu-banner-09.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Laptop\menu-banner-06.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Laptop\menu-banner-07.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Shop\menu-banner-02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\menu banner\Shop\menu-banner-03.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\newsletter.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\no-image.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\pantalone.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\percente.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\products\10_22edce15-dbfd-48ca-bf9e-cb2e28721adf_554x610 (1).webp
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\products\Desman_bluza_800x800.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\products\edge-48-706-2.webp
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\products\edge-48-706.webp
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\rukavice.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\security\bbb.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\security\norton.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\security\truste.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\security\trustwave.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\services\01.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\services\02.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\services\03.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\services\04.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\services\05.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slem.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Slider-3.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Slider-4.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Slider-5.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-viva-01.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-viva-02.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-viva-03.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-viva-04.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slider-viva-05.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\slusalice.png
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\top-banner.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\truck.jpg
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\Viva_Footer_img.PNG
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\aos.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\api.jquery.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\bootstrap.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\cart.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\countdown.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\currencies.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\custom-js.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\details-disclosure.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\global.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\ie11CustomProperties.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\imagesLoaded.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\inview.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jquery-cookie.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jquery.currencies.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jquery.history.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jquery.hoverdir.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jquery.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jQuery.products.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\jquery.zoom.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\lightbox-2.6.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\magnific-popup.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\modernizr.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\option_selection.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\owl.carousel.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\parallax.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\ResizeSensor.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\shop.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\site.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\slick.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\theia-sticky-sidebar.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\theme.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\threesixty.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\LICENSE
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\libman.json
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.runtimeconfig.json
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.pdb
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\AutoMapper.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\DNTCaptcha.Core.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Bcl.HashCode.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Data.SqlClient.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Caching.Memory.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Configuration.Binder.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Logging.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Options.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Primitives.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Identity.Client.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\RestSharp.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Collections.Immutable.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Drawing.Common.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Runtime.Caching.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Runtime.CompilerServices.Unsafe.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\System.Text.Json.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-x64\native\sni.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win-x86\native\sni.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Data.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Data.Model.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Data.pdb
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\Data.Model.pdb
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.Views.dll
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.Views.pdb
+C:\Projects\Mobile\b2b.project\b2b.project\b2b.webstore\obj\Release\netcoreapp3.1\PubTmp\Out\viva.webstore.deps.json

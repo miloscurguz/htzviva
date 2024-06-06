@@ -1,0 +1,398 @@
+﻿@page
+@model viva.webstore.Pages.Shop.IndexModel
+@{
+}
+
+
+
+<div class="breadcrumb-wrap">
+    <div class="container">
+
+        <span class="title">Pretraga</span>
+        <div class="breadcrumb">
+            <a href="/" title="Pocetna"><i class="mdi mdi-home-outline"></i></a>
+
+            <span aria-hidden="true" class="breadcrumb__sep">&gt;</span>
+
+            <span>Pretraga</span>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="pagecontent" style="transform: none;">
+    <div id="shopify-section-template--15813930942693__main" class="shopify-section" style="transform: none;">
+        <!-- /templates/collection.liquid -->
+        <div class="container" style="transform: none;">
+            <div class="row" style="transform: none;">
+                <!-- /snippets/collection.liquid -->
+
+                <div class="content_wrap left-sidebar-column" style="transform: none;">
+
+                    <div class="col-xs-12 col-sm-0 left-sidebar sidebar" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+                        <!-- /snippets/collection-sidebar.liquid -->
+
+                        <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                            <div class="sidebar__inner">
+                                <div class="collection_sidebar">
+
+                                    <div id="shopify-section-sidebar-promoimage" class="shopify-section">
+                                        <div class="widget widget_promo_img" data-section-id="template--15813930942693__main">
+                                            <ul id="promo-carousel">
+
+                                               @* <li>
+                                                    <a href="#" title="">
+                                                        <img loading="lazy" height="400" width="320" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/left-banner_7d201359-91f0-4a92-962f-30f6838703f7_320x400.jpg?v=1650975521" alt="" title="">
+                                                    </a>
+                                                </li>*@
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resize-sensor" style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                                <div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                                    <div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 358px; height: 2022px;">
+                                    </div>
+                                </div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-xs-12 col-sm-12 collection_wrapper collection_right" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+
+
+
+
+
+                        <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; left: 444.5px; top: 0px;">
+                            <div id="ProductGridContainer">
+
+                                <div class="collection_template" id="product-grid" data-id="template--15813930942693__main">
+                                    <header class="section-header text-left">
+
+
+
+                                        <div class="filter-wrapper left_sidebar wrap_toggle_filter">
+                                         @*   <div class="showing">
+                                                <span class="show-txt">Prikazano</span> <span class="loadcount">2</span> of 2 rezultata.
+                                            </div>*@
+                                            <div class="filter">
+
+
+                                                <div class="view-mode filter-grid-list grid__item">
+                                                    <a class="grid" id="grid-view" title="Grid view"><span>Grid view</span></a>
+                                                    <a class="list" id="list-view" title="List view"><span>List view</span></a>
+                                                    <a class="short-list active" id="short-list-view" title="Short list view"><span>Short list view</span></a>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="sorting_wrapper">
+                                                <facet-filters-form class="facets facet-hide">
+                                                   
+                                                        <div class="facet-filters sorting caption">
+                                                            <div class="filter-sortby facet-filters__field">
+                                                                <label class="facet-filters__label caption-large" for="SortBy">Sortiraj:</label>
+                                                                <div class="select sorting-section">
+                                                                    <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                                                                        <option value="1" selected="selected">Po nazivu , A-Š</option>
+                                                                        <option value="2">Po nazivu , Š-A</option>
+                                                                        <option value="3">Po ceni - Uzlazno</option>
+                                                                        <option value="4">Po ceni - Silazno</option>
+                                                            
+                                                                       
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                  
+                                                </facet-filters-form><div class="filter-show grid__item">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                       
+
+                                    </header>
+                                    <div class="grid-uniform product-grid col-main">
+
+                                        <div class="products-grid-view">
+                                            @foreach (var item in Model.vm.Artikli)
+                                            {
+                                                <div class="grid-item style3 medium-down--one-half large-up--one-fifth Digital Cameras product-short-list">
+                                                    <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                        <div class="product-wrapper product_container imgloaded">
+                                                            <div class="product-thumb col-xs-4 col-sm-3 col-md-2">
+                                                                <div class="product-image col-xs-12 padding_0">
+                                                                    <a class="grid-view-item__link grid-view-item__links" asp-page="/product/index" asp-route-id="@item.Id" asp-route-model="true">
+                                                                        @if (String.IsNullOrEmpty(item.Slika))
+                                                                        {
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="~/img/no-image.png">
+
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="@item.Slika" alt="@item.Description">
+
+                                                                        }
+                                                                           </a>
+                                                                    <div class="loader">
+                                                                        <div class="preloader-wrapper active">
+                                                                            <div class="spinner-layer"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-description col-xs-8 col-sm-9 col-md-10">
+                                                                <div class="short-title col-xs-6 col-sm-5">
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        @if (!String.IsNullOrEmpty(@item.Brand))
+                                                                        {
+                                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="@item.Brand.Trim()" title="@item.Brand">@item.Brand </a>
+                                                                        }
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" asp-page="/product/index" asp-route-id="@item.Id" asp-route-model="true">@item.Description</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="grid-view-item__meta">
+
+                                                                    @*    @if(item.Popust>0){
+
+                                                                <div class="sale-price">
+                                                                <span class="product-price__price product-price__sale"><span class="money" >@item.FinalnaCena RSD</span></span>
+                                                                <span class="discount-percentage">-@item.Popust %</span>
+                                                                <s class="product-price__price compare_price"><span class="money">@item.Mpcena RSD</span></s>
+                                                                <br/>
+                                                                <span class="money" >(8.550,00 RSD bez PDV)</span>
+                                                                </div>
+
+                                                                }else{
+
+                                                                <div class="sale-price">
+                                                                <span class="product-price__price product-price__sale"><span class="money" >@item.FinalnaCena RSD</span></span>
+                                                                <br />
+                                                                <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                </div>
+
+                                                                }*@
+
+
+                                                                    <div class="sale-price">
+                                                                        <span class="product-price__price product-price__sale"><span class="money">@String.Format("{0:N}",item.FinalnaCena) RSD.</span></span>
+                                                                        <br />
+                                                                        @if (item.FinalnaCenaPdv != null)
+                                                                        {
+                                                                            <span class="money">(@String.Format("{0:N}",Math.Round(Convert.ToDecimal(item.FinalnaCenaPdv), 2)) RSD bez PDV)</span>
+                                                                        }
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="btn_wrapper">
+                                                                    <div class="cart-qty">
+
+                                                                    @*    <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>*@
+
+                                                                    </div>
+
+                                                                    @*         <div class="add-to-wishlist pro_btn">
+                                                                <div class="show">
+                                                                <div class="default-wishbutton-samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit loading">
+                                                                <a class="add-in-wishlist-js btn" href="samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit" title="wishlist">
+                                                                <svg class="repeat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                                                </svg><span class="tooltip-label">wishlist</span>
+                                                                </a>
+                                                                </div>
+                                                                <div class="loadding-wishbutton-samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit loading" style="display: none; pointer-events: none">
+                                                                <a class="add_to_wishlist" href="samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit">
+                                                                <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                <polyline points="23 4 23 10 17 10"></polyline>
+                                                                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                </svg><span class="tooltip-label">wishlist</span>
+                                                                </a>
+                                                                </div>
+                                                                <div class="added-wishbutton-samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit loading" style="display: none;">
+                                                                <a class="added-wishlist add_to_wishlist btn" href="/pages/wishlist" title="added in wishlist">
+                                                                <svg class="repeat-once" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                                                </svg><span class="tooltip-label">added Wishlist</span>
+                                                                </a>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+
+
+                                                                <div class="add-to-compare pro_btn">
+                                                                <div class="show">
+                                                                <div class="default-comparebutton-samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit loading">
+                                                                <a class="add-in-compare-js btn" data-comparehandle="samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit" title="compare">
+                                                                <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                                                                <svg class="repeat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                <polyline points="1 4 1 10 7 10"></polyline>
+                                                                <polyline points="23 20 23 14 17 14"></polyline>
+                                                                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                                                                </svg>
+                                                                <span class="tooltip-label">compare</span>
+                                                                </a>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+
+
+                                                                <div class="quick-view-wrap pro_btn">
+                                                                <a href="javascript:void(0)" data-id="samsung-nx-mini-mirrorless-digital-camera-with-9mm-and-9-27mm-lenses-and-case-kit" class="quick-view-text for-home btn" title="Quickview">
+                                                                <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                <polyline points="23 4 23 10 17 10"></polyline>
+                                                                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                </svg>
+                                                                <svg class="repeat-once" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                                <circle cx="12" cy="12" r="3"></circle>
+                                                                </svg><span class="tooltip-label">Quick View</span>
+                                                                </a>
+                                                                </div>*@
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            }
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                    <br /><br />
+                                    @{
+                                        var prevDisabled = !Model.vm.Artikli.HasPreviousPage ? "disabled" : "";
+                                        var nextDisabled = !Model.vm.Artikli.HasNextPage ? "disabled" : "";
+                                    }
+                                    <div>
+                                        <div class="col-md-12 text-center" style="float:left">
+                                            <div class="site-block-27">
+                                                <ul class="pagination">
+                                                    <li>
+                                                        <a asp-page="Index"
+                                                           asp-route-SortMode="@Model.vm.SortMode"
+                                                           asp-route-Keyword="@Model.vm.Keyword"
+                                                           asp-route-RecordsByPage="@Model.vm.RecordByPage"
+                                                           asp-route-Group_Id="@Model.vm.Group_Id"
+                                                           asp-route-Sub_Group_Id="@Model.vm.Sub_Group_Id"
+                                                           asp-route-Brand="@Model.vm.Brand"
+                                                           asp-route-PageNumber="@(Model.vm.Artikli.PageIndex - 1)"
+                                                           asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn @prevDisabled">&lt;</a>
+                                                    </li>
+                                                    @for (int i = 1; i <= Model.vm.Total; i++)
+                                                    {
+                                                        string classActive = "";
+                                                        if (i == @Model.vm.PageNumber)
+                                                        {
+                                                            classActive = "active";
+                                                        }
+                                                        <li class=@classActive>
+                                                            <a class="434" asp-page="Index"
+                                                            
+                                                           asp-route-SortMode="@Model.vm.SortMode"
+                                                            asp-route-Keyword="@Model.vm.Keyword"
+                                                           asp-route-Group_Id="@Model.vm.Group_Id"
+                                                           asp-route-Sub_Group_Id="@Model.vm.Sub_Group_Id"
+                                                           asp-route-Brand="@Model.vm.Brand"
+                                                           asp-route-RecordsByPage="@Model.vm.RecordByPage"
+                                                           asp-route-PageNumber="@i"
+                                                          >
+                                                           @i</a>
+                                                        </li>
+                                                    }
+                                                    <li>
+                                                        <a asp-page="Index"
+                                                           asp-route-SortMode="@Model.vm.SortMode"
+                                                           asp-route-Keyword="@Model.vm.Keyword"
+                                                           asp-route-Group_Id="@Model.vm.Group_Id"
+                                                           asp-route-Sub_Group_Id="@Model.vm.Sub_Group_Id"
+                                                           asp-route-Brand="@Model.vm.Brand"
+                                                           asp-route-RecordsByPage="@Model.vm.RecordByPage"
+                                                           asp-route-PageNumber="@(Model.vm.Artikli.PageIndex + 1)"
+                                                           asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn @nextDisabled">&gt;</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div><div class="resize-sensor" style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 1402px; height: 805px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+       
+        $(function () {
+            const queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var SortMode = urlParams.get('SortMode');
+            if(SortMode==null){
+                SortMode=1;
+            }
+            $("#SortBy").val(SortMode);
+        });
+        $("#SortBy").on("change",function(){
+            var value= this.value;
+            var url = window.location.href;
+            const queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            const Group_Id = urlParams.get('Group_Id');
+            const Sub_Group_Id = urlParams.get('Sub_Group_Id');
+            var SortMode = urlParams.get('SortMode');
+            if(SortMode==null){
+                 urlParams.set("SortMode", value);
+            }else{
+                urlParams.set("SortMode", value);
+            }
+            history.pushState(null, null, "?" + urlParams.toString());
+            location.reload();
+        });
+    </script>
+}

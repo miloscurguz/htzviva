@@ -1,0 +1,91 @@
+﻿@page
+@model viva.webstore.Pages.Account.RegisterModel
+@{
+}
+
+
+
+<main class="main-content" role="main">
+
+
+    <div class="breadcrumb-wrap">
+        <div class="container">
+
+            <span class="title">Napravi nalog</span>
+            <div class="breadcrumb">
+                <a href="/" title="Nazad na prodavnicu"><i class="mdi mdi-home-outline"></i></a>
+
+                <span aria-hidden="true" class="breadcrumb__sep">&gt;</span>
+                <span>Napravi nalog</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pagecontent">
+
+        <div class="grid">
+            <div class="container">
+                <div class="row">
+                    <div class="register col-sm-12 text-center">
+                        <div class="register-page">
+                            <h1 class="tt-innerpagetitle">Napravi nalog</h1>
+
+
+                            <form method="post" action="/account" id="create_customer" accept-charset="UTF-8" data-login-with-shop-sign-up="true" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;create_customer&quot;); return false;">
+                                <input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓">
+
+
+
+                                <label for="first_name" class="form-label--hidden">
+                                   Ime
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <input type="text" name="customer[first_name]" id="first_name" required="required" placeholder="First Name" autocapitalize="words" autofocus="">
+
+                                <label for="last_name" class="form-label--hidden">
+                                    Prezime
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <input type="text" name="customer[last_name]" id="last_name" required="required" placeholder="Last Name" autocapitalize="words">
+
+                                <label for="email" class="form-label--hidden">
+                                    Email
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <input type="email" name="customer[email]" id="email" required="required" placeholder="Email" autocorrect="off" autocapitalize="off">
+
+                                <label for="password" class="form-label--hidden">
+                                    Sifra
+                                    <span>
+                                        *
+                                    </span>
+                                </label>
+                                <input type="password" name="customer[password]" id="create_password" required="required" placeholder="Password">
+
+                                <div class="text-center">
+                                    <p>
+                                        <input type="submit" value="Create" class="btn">
+                                    </p>
+                                    <a href="https://themes-gudgets.myshopify.com"><i class="mdi mdi-chevron-left"></i> Nazad na porodavnicu</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            function showRecoverPasswordForm() { document.getElementById('recover_password').style.display = 'block'; document.getElementById('customer_login').style.display = 'none' }
+            function hideRecoverPasswordForm() { document.getElementById('recover_password').style.display = 'none'; document.getElementById('customer_login').style.display = 'block' }
+            if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+        </script>
+    </div>
+</main>

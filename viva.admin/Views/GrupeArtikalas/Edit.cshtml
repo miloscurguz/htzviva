@@ -1,0 +1,254 @@
+﻿@model Data.Models.GrupeArtikala
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    /*
+     CSS for the main interaction
+    */
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+    }
+
+    /*
+     Styling
+    */
+    body {
+        font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+        color: #333;
+        font-weight: 300;
+    }
+
+    .tabset > label {
+        position: relative;
+        display: inline-block;
+        padding: 15px 15px 25px;
+        border: 1px solid transparent;
+        border-bottom: 0;
+        cursor: pointer;
+        font-weight: 600;
+        margin-bottom: -0.5rem;
+    }
+
+        .tabset > label::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+            width: 22px;
+            height: 4px;
+            background: #8d8d8d;
+        }
+
+        .tabset > label:hover,
+        .tabset > input:focus + label {
+            color: #06c;
+        }
+
+            .tabset > label:hover::after,
+            .tabset > input:focus + label::after,
+            .tabset > input:checked + label::after {
+                background: #06c;
+            }
+
+    .tabset > input:checked + label {
+        border-color: #ccc;
+        border-bottom: 1px solid #fff;
+        margin-bottom: -1px;
+    }
+
+    .tab-panel {
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+   
+
+</style>
+<h1>Menjanje grupe artikala</h1>
+
+<h4>@Model.Naziv</h4>
+<hr />
+<div class="tabset">
+    <!-- Tab 1 -->
+    <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+    <label for="tab1">Detalji</label>
+    <!-- Tab 2 -->
+    <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+    <label for="tab2">Slika</label>
+
+
+    <div class="tab-panels">
+        <section id="marzen" class="tab-panel">
+            <div class="row">
+                <div class="col-md-6">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="SourceId" />
+                        <input type="hidden" asp-for="Naziv" />
+
+                        <div class="form-group">
+                            <label class="control-label">Web Shop Naziv</label>
+                            <input asp-for="WebshopNaziv" class="form-control" />
+                            <span asp-validation-for="WebshopNaziv" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Aktivan (Da li da se pojavljuje na Web Shopu)</label>
+                            <input type="checkbox" asp-for="Aktivan" class="form-control" />
+                            <span asp-validation-for="Aktivan" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Naslovna (Da li da se pojavi na naslovnoj stranici kao istaknuta grupa)</label>
+                            <input type="checkbox" asp-for="Naslovna" class="form-control" />
+                            <span asp-validation-for="Naslovna" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Redolsed prikazivanja na naslovnoj stani</label>
+                            <input asp-for="Order" class="form-control" />
+                            <span asp-validation-for="Order" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Snimi detalje grupe" class="btn btn-primary" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+          
+        </section>
+        <section id="rauchbier" class="tab-panel">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Glavna slika:</h4>
+                    * Sve slike moraju biti istih dimenzija !
+
+                    <form asp-controller="SnimiGlavnuSlikuGrupa" enctype="multipart/form-data" method="post" id="formMainImage">
+                        <input type="file" name="files" />
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-primary" style="margin-left:20px;" asp-action="SnimiGlavnuSlikuGrupa">Snimi sliku</button>
+                        <input type="hidden" asp-for="Slika" />
+
+                        <br />  <br />
+                        @if (Model.Slika != null)
+                        {
+                            <img src="@Url.Action("SomeImage", "GrupeArtikalas", new { imageName = Model.Slika.Trim() })" alt="" style="max-height:200px; max-width:200px" />
+                        }
+
+                        <div>
+                            <button type="submit" class="btn btn-danger" asp-action="ObrisiSliku">Obrisi sliku</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+           </section>
+        <section id="dunkles" class="tab-panel">
+            <h2>6C. Dunkles Bock</h2>
+            <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes the malty-rich and somewhat toasty qualities of continental malts without being sweet in the finish.</p>
+            <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a brewing center and popular exporter in the days of the Hanseatic League (14th to 17th century). Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption of the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.</p>
+        </section>
+    </div>
+
+</div>
+
+
+
+
+    
+
+
+<hr />
+
+<br />
+<div>
+    <a asp-action="Index">Nazad na listu</a>
+</div>
+<div class="modal fade" id="confirm-activation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+
+                <button id="btnSamoGrupa" type="button" class="btn btn-default"> Samo grupu</button>
+                <a id="btnGrupaArtikli" class="btn btn-danger btn-ok">Grupu i sve artikle pod grupom</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+
+    <script>
+        var id = $("#Id").val();
+        $("#Aktivan").change(function () {
+            if (this.checked) {
+                var $modal = $("#confirm-activation");
+                var $modalBody = $("#confirm-activation .modal-body");
+                var $modalHeader = $("#confirkals/m-activation .modal-header");
+                $modalBody.html("<p>Aktivacije grupe. Da li zelite da aktivirate samo grupu ili/i sve artikle koji se nalaze u toj grupi?</p>");
+                $modalHeader.html("<p>Aktivacije grupe.</p>");
+                $modal.modal("show");
+                $("#btnSamoGrupa").on("click", function () { AktivacijaGrupe(false) });
+                $("#btnGrupaArtikli").on("click", function () { AktivacijaGrupe(true) });
+            } else {
+
+
+                var $modal = $("#confirm-activation");
+                var $modalBody = $("#confirm-activation .modal-body");
+                var $modalHeader = $("#confirm-activation .modal-header");
+                $modalBody.html("<p>Deaktivacije grupe. Da li zelite da deaktivirate samo grupu ili/i sve artikle koji se nalaze u toj grupi?</p>");
+                $modalHeader.html("<p>Deaktivacije grupe.</p>");
+                $modal.modal("show");
+                $("#btnSamoGrupa").on("click", function () { DeaktivacijaGrupe(false) });
+                $("#btnGrupaArtikli").on("click", function () { DeaktivacijaGrupe(true) });
+            }
+        });
+
+        function AktivacijaGrupe(artikli) {
+
+            $.ajax({
+                method: "GET",
+                url: "/GrupeArtikalas/AktivirajGrupu",
+                data: { artikli: artikli, gId: id }
+            })
+                .done(function (msg) {
+                    var $modal = $("#confirm-activation");
+                    $modal.modal("hide");
+                });
+        }
+
+        function DeaktivacijaGrupe(artikli) {
+
+            $.ajax({
+                method: "GET",
+                url: "/GrupeArtikalas/DeaktivirajGrupu",
+                data: { artikli: artikli, gId: id }
+            })
+                .done(function (msg) {
+                    var $modal = $("#confirm-activation");
+                    $modal.modal("hide");
+                });
+        }
+    </script>
+}
+
+

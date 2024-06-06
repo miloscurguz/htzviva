@@ -1,0 +1,765 @@
+﻿@page
+@using viva.webstore.Models.Product;
+@model viva.webstore.Pages.Product.IndexModel
+@{
+}
+@Html.AntiForgeryToken()
+<div class="breadcrumb-wrap">
+    <div class="container">
+        <span class="title">@Model.Detail.Naziv</span>
+        <div class="breadcrumb">
+            <a href="/" title="Nazad na pocetnu stranu"><i class="mdi mdi-home-outline"></i></a>
+            <span aria-hidden="true" class="breadcrumb__sep">&gt;</span>
+            <a asp-page="/Shop/Index" asp-route-Group_Id="@Model.Detail.Category_Id" asp-route-Sub_Group_Id="0" title="">@Model.Detail.Category</a>
+        </div>
+    </div>
+</div>
+
+<div class="pagecontent">
+    <div id="shopify-section-template--15813931270373__main" class="shopify-section">
+        <style>
+            .product_tab_wrapper ul.tabs li.active > a,
+            .product_tab_wrapper ul.tabs li > a:focus, .product_tab_wrapper ul.tabs li > a:hover {
+                color: #111111;
+            }
+
+            .product_tab_wrapper ul.tabs li > a {
+                color: #7b818f;
+            }
+
+            .tabset {
+                text-align: center;
+            }
+
+                .tabset > input[type="radio"] {
+                    position: absolute;
+                    left: -200vw;
+                }
+
+                .tabset .tab-panel {
+                    display: none;
+                }
+
+                .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+                .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+                .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+                .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+                .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+                .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+                    display: block;
+                }
+
+
+
+                .tabset > label {
+                    position: relative;
+                    display: inline-block;
+                    padding: 15px 15px 25px;
+                    border: 1px solid transparent;
+                    border-bottom: 0;
+                    cursor: pointer;
+                    font-weight: 600;
+                    margin-bottom: -0.5rem;
+                }
+
+                    .tabset > label::after {
+                        content: "";
+                        position: absolute;
+                        left: 15px;
+                        bottom: 10px;
+                        width: 80%;
+                        height: 4px;
+                        background: #8d8d8d;
+                    }
+
+                    .tabset > label:hover,
+                    .tabset > input:focus + label {
+                        color: #06c;
+                    }
+
+                        .tabset > label:hover::after,
+                        .tabset > input:focus + label::after,
+                        .tabset > input:checked + label::after {
+                            background: #F8B131;
+                        }
+
+                .tabset > input:checked + label {
+                    border-color: #ccc;
+                    border-bottom: 1px solid #fff;
+                    margin-bottom: -1px;
+                }
+
+            .tab-panel {
+                padding: 30px 0;
+                border-top: 1px solid #ccc;
+             
+              
+            }
+
+          
+
+            .cart-policy .policy #icon-655603c2-0421-44a9-84eb-e0c2b277953c.policy-icon {
+                mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-01_40x40.png?v=1650445355);
+                -webkit-mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-01_40x40.png?v=1650445355);
+            }
+
+            .cart-policy .policy .policy-icon {
+                color: #000000;
+                background: #000000;
+                   width: 65px !important;
+            }
+        </style>
+
+
+
+
+
+        <div itemscope="" itemtype="http://schema.org/Product" class="product-template__container page-width" id="ProductSection-template--15813931270373__main" data-section-id="template--15813931270373__main" data-section-type="product-template" data-enable-history-state="true" data-zoom-enable="true" data-ajax-enabled="true">
+
+            <div class="container">
+
+                <div id="product-sticky" class="product-single demo vertical_left design_1">
+
+                    <div class="row">
+
+
+                        <div class="col-xs-12 col-sm-4  demo text-center product-wrapper-owlslider" data-id="7685107417317" data-product-single-media-group>
+                           
+                                @if (Model.Detail.DodatneSlike.Count > 0)
+                                {
+                                <div class="product-image-content">
+                                    <div class="product-single__photos" id="productPhoto">
+
+                                        @{
+                                            int i = 1;
+                                        }
+                                        @foreach (var item in Model.Detail.DodatneSlike)
+                                        {
+                                            if (i == 1)
+                                            {
+                                                <div data-product-single-media-wrapper class="product-single__media-wrapper" data-media-id="@item.Id" tabindex="-1">
+
+                                                    <div class="product__media media js-zoom-enabled" data-image-zoom-wrapper data-zoom="@item.Name">
+                                                        <img loading="lazy" id="productPhotoImg" src="@item.Name" data-image-zoom>
+                                                    </div>
+
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div data-product-single-media-wrapper class="product-single__media-wrapper hide" data-media-id="@item.Id" tabindex="-1">
+
+                                                    <div class="product__media media js-zoom-enabled" data-image-zoom-wrapper data-zoom="@item.Name">
+                                                        <img loading="lazy" id="productPhotoImg" src="@item.Name" data-image-zoom>
+                                                    </div>
+
+                                                </div>
+                                            }
+                                            i++;
+                                        }
+
+
+
+                                        <div class="product-image-btn">
+                                            <div class="gallery">
+                                                @if (Model.Detail.DodatneSlike.Count > 0)
+                                                {
+                                                    @foreach (var item in Model.Detail.DodatneSlike)
+                                                    {
+
+                                                        <a class="product-lightbox-btn tip-top img_36945407869157" data-id="img_36945407869157" href="@item.Name">
+                                                            <i class="mdi mdi-magnify"></i>
+                                                        </a>
+                                                    }
+
+                                                }
+
+
+
+
+                                                <a class="product-lightbox-btn tip-top img_36945407901925" data-id="img_36945407901925" href="//cdn.shopify.com/s/files/1/0633/2078/5125/products/16-02.jpg?v=1648112884">
+                                                    <i class="mdi mdi-magnify"></i>
+                                                </a>
+
+
+
+                                                <a class="product-lightbox-btn tip-top img_36945407934693" data-id="img_36945407934693" href="//cdn.shopify.com/s/files/1/0633/2078/5125/products/16-03.jpg?v=1648112884">
+                                                    <i class="mdi mdi-magnify"></i>
+                                                </a>
+
+
+                                                <a class="product-lightbox-btn tip-top img_" data-id="img_" data-tip="Zoom" href="//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.gif"><i class="mdi mdi-magnify"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <product-thumb>
+                                        <ul class="product-single__thumbs product-single__thumbnails-template--15813931270373__main vertical_left" id="productThumbs">
+                                            @if (Model.Detail.DodatneSlike.Count > 0)
+                                            {
+                                                @foreach (var item in Model.Detail.DodatneSlike)
+                                                {
+                                                    <li class="grid-item">
+                                                        <a href="@item.Name"
+                                               class="product-single__thumbnail--template--15813931270373__main text-link product-single__thumbnail "
+                                               data-thumbnail-id="@item.Id">
+                                                            <img loading="lazy" class="product-single__thumbnail-image" src="@item.Name" alt="">
+                                                        </a>
+                                                    </li>
+                                                }
+
+                                            }
+
+                                        </ul>
+                                    </product-thumb>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="product-image-content">
+                                    <div class="product-single__photos" id="productPhoto">
+                                         <div data-product-single-media-wrapper class="product-single__media-wrapper"  tabindex="-1">
+
+                                            <div class="product__media media">
+                                                <img loading="lazy" id="productPhotoImg" src="~/img/no-image.png">
+                                            </div>
+
+                                        </div>
+                                        </div>
+                                        </div>
+
+                            }
+                        </div>
+                        <div class="col-xs-12 col-sm-8 demo product-information product_fixed_block">
+
+                            <div  class="col-sm-8 product_fixed_block product-description">
+
+                                <div data-id="product-7685109973221" class="product-information-inner product-block fixed-product-block">
+                                    <div class="fixed-content">
+                                        <div class="product-single__header col-xs-12">
+                                            <div class="title-arrows">
+                                                <h1 itemprop="name" class="product-single__title text-capitalize wvendor">
+                                                        @Model.Detail.Naziv
+                                                </h1>
+
+
+
+
+                                            </div>
+                                            <div>
+                                                <span id="txt_sifra">@Model.Detail.Sifra</span>
+                                            </div>
+                                            <hr class="hr">
+                                            <p class="visually-hidden" data-product-status="" aria-live="polite" role="status"></p>
+                                            <p class="visually-hidden" data-loader-status="" aria-live="assertive" role="alert" aria-hidden="true">translation missing: en.products.product.loader_label</p>
+                                                @if (Model.Detail.Opis2 != null)
+                                                {
+                                                <div class="product-single__desc rte col-xs-12 padding_0" itemprop="description">
+                                                        @Html.Raw(Model.Detail.Opis2)
+
+                                                </div>
+                                                }
+
+                                            <hr class="hr">
+
+                                            <div class="h2 product-single__price" id="price-template--15813931270373__main">
+                                                <!-- snippet/product-price.liquid --><div class="price price--on-sale">
+
+                                                    <div class="sale-price">
+                                                            @if (Model.Detail.HasPopust)
+                                                            {
+                                                            <span class="discount-percentage">Popust -@(Model.Detail.Popust)%</span>
+                                                            <span class="product-price__price product-price__sale"><span class="money">@String.Format("{0:N}",Model.Detail.FinalnaCena) RSD</span></span>
+                                                            <s class="product-price__price compare_price"><span class="money">@String.Format("{0:N}",Model.Detail.MpCena) RSD</span></s>
+                                                            <br />
+                                                            <span style="font-size: 14px;color: black;">(@String.Format("{0:N}",Math.Round(Model.Detail.FinalnaCenaBezPdv, 2)) RSD bez PDV)</span>
+                                                            }
+                                                            else
+                                                            {
+                                                            <span class="product-price__price product-price__sale"><span class="money">@String.Format("{0:N}",Model.Detail.FinalnaCena) RSD.</span></span>
+                                                            <br />
+                                                            <span style="font-size: 14px;color: black;">(@String.Format("{0:N}",Math.Round(Model.Detail.FinalnaCenaBezPdv, 2)) RSD. bez PDV)</span>
+
+                                                            }
+
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <hr class="hr">
+
+                                            <div class="product-info">
+
+                                                <p class="product-single__vendor">
+                                                    <label>Proizvođač : </label>
+                                                    <span><a asp-page="/Shop/Index" asp-route-Group_Id="0"  asp-route-Sub_Group_Id="0" asp-route-Brand="@Model.Detail.Brand.Trim()" title="@Model.Detail.Brand">@Model.Detail.Brand </a></span>
+                                                </p>
+
+                                               @* <meta itemprop="url" content="https://themes-gudgets.myshopify.com/products/vivo-iqoo-7-legend-4000-mah-lithium-polymer">
+                                                <meta itemprop="image" content="//cdn.shopify.com/s/files/1/0633/2078/5125/products/10_22edce15-dbfd-48ca-bf9e-cb2e28721adf_grande.jpg?v=1648112969">
+*@
+                                                <p class="product-type">
+                                                    <label>Grupa :</label>
+                                                    <span><a asp-page="/Shop/Index" asp-route-Sub_Group_Id="0" asp-route-Group_Id="@Model.Detail.Category_Id" class="collection-title text-center" item-prop="collection">@Model.Detail.Category</a></span>
+                                                    @if (!String.IsNullOrEmpty(Model.Detail.Sub_Category_Id))
+                                                    {
+                                                        <span> / </span>
+                                                        <span><a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="@Model.Detail.Sub_Category_Id" class="collection-title text-center" item-prop="collection">@Model.Detail.Sub_Category</a></span>
+                                                    }
+                                                </p>
+                                                    @if (!String.IsNullOrEmpty(Model.Detail.Barkod))
+                                                    {
+                                                    <p class="product-type">
+                                                        <label>Barkod :</label>
+                                                        <span id="txt_barkod">@Model.Detail.Barkod</span>
+                                                    </p>
+                                                    }
+
+
+
+                                            </div>
+                                        </div>
+                                        <hr class="hr">
+                                        <div class="quantity" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                            <div class="variant">
+                                                <variant-selects class="no-js-hidden">
+                                                    <div class="product-info">
+
+                                                            @if (Model.Detail.Boje_Moguce != null)
+                                                            {
+                                                                @if (Model.Detail.Boje_Moguce.Count > 1)
+                                                                {
+                                                                <input id="single_size" type="hidden" value="false" />
+                                                                <label class="form__label">
+                                                                    Boje
+                                                                </label>
+                                                                <div class="select">
+                                                                    <select asp-for="Detail.ColorId" asp-items="@(new SelectList(Model.Detail.Boje_Moguce, nameof(Model_Color.Id), nameof(Model_Color.Color)))">
+                                                                    </select>
+                                                                </div>
+                                                                }
+                                                                else if (Model.Detail.Boje_Moguce.Count == 1)
+                                                                {
+                                                                    if (Model.Detail.Boje_Moguce[0].Color.Trim() != "*")
+                                                                    {
+                                                                    <input id="single_size" type="hidden" value="true" />
+                                                                    <p class="product-single__vendor">
+                                                                        <label>Boja: </label>
+                                                                       <span>@Model.Detail.Boje_Moguce[0].Color</span><span id="color_single_id" style="display:none">@Model.Detail.Boje_Moguce[0].Id</span></p>
+
+                                                                  
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                    <input id="single_size" type="hidden" value="true" />
+                                                                    <span id="color_single_id" style="display:none">@Model.Detail.Boje_Moguce[0].Id</span>
+                                                                    }
+
+                                                                }
+                                                            }
+
+
+                                                    </div>
+                                             
+                                                </variant-selects>
+                                            </div>
+                                              <div class="variant">
+                                                <variant-selects class="no-js-hidden">
+                                        
+                                                    <div class="product-info">
+                                                            @if (Model.Detail.Velicine_Moguce != null)
+                                                            {
+                                                                @if (Model.Detail.Velicine_Moguce.Count > 1)
+                                                                {
+                                                                   <br/>
+                                                                <label class="form__label">
+                                                                    Veličine
+                                                                </label>
+                                                                <div class="select">
+                                                                    <select asp-for="Detail.SizeId" asp-items="@(new SelectList(Model.Detail.Velicine_Moguce, nameof(Model_Size.Id), nameof(Model_Size.Size)))">
+                                                                    </select>
+                                                                </div>
+                                                                }
+                                                                else if (Model.Detail.Velicine_Moguce.Count == 1)
+                                                                {
+                                                                    if (Model.Detail.Velicine_Moguce[0].Size.Trim() != "*")
+                                                                    {
+                                                              
+
+                                                                    <p class="product-single__vendor"><label>Veličina: </label> <span>@Model.Detail.Velicine_Moguce[0].Size</span></p>
+
+                                                                    <br />
+                                                                    }
+
+                                                                }
+                                                            }
+                                                    </div>
+                                                </variant-selects>
+                                            </div>
+                                            <hr/>
+                                                @*      <noscript class="product-form__noscript-wrapper-template--15813931270373__main">
+                                            <div class="product-form__input">
+                                            <label class="form__label" for="Variants-template--15813931270373__main">translation missing: en.products.product.product_variants</label>
+                                            <div class="select">
+                                            <select name="id" id="Variants-template--15813931270373__main" class="select__select" form="product-form">
+                                            <option selected="selected"
+                                            value="42655693340901">
+                                            Bela
+
+                                            - $500.00
+                                            </option>
+                                            <option value="42655693373669">
+                                            Black
+
+                                            - $520.00
+                                            </option>
+                                            </select>
+                                            </div>
+                                            </div>
+                                            </noscript>
+                                            *@
+
+
+                                            <div class="grid--uniform product-single__addtocart">
+                                                <product-form class="product-form">
+                                                    <div class="product-form__error-message-wrapper" role="alert" hidden="">
+                                                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                                                            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle>
+                                                            <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle>
+                                                            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path>
+                                                            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"></path>
+                                                        </svg>
+                                                        <span class="product-form__error-message"></span>
+                                                    </div>
+                                                    <form method="post" action="/cart/add" id="product-form-template--15813931270373__main" accept-charset="UTF-8" class="product-form-7685109973221" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form">
+                                                        <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+                                                        <div class="product-qty " id="product-qty">
+                                                            <label>Količina</label>
+                                                            <quantity-input class="qty-box-set quantity">
+
+                                                                <button class="dec button qtyminus quantity__button no-js-hidden" name="minus" type="button">
+                                                                  @*  <span class="visually-hidden">translation missing: en.products.product.decrease</span>*@
+                                                                    <i class="mdi mdi-minus"></i>
+                                                                </button>
+                                                                <input class="quantity__input quantity1" type="number" name="quantity" id="Quantity-template--15813931270373__main" min="1" value="1" form="product-form-template--15813931270373__main">
+                                                                <button class="inc button qtyplus quantity__button no-js-hidden" name="plus" type="button">
+                                                                  @*  <span class="visually-hidden">translation missing: en.products.product.increase</span>*@
+                                                                </button>
+
+                                                            </quantity-input>
+                                                        </div>
+
+                                                        <input type="hidden" name="id" id="Article_Id" value="@Model.Detail.Artikal_Id">
+                                                        <div class="product-form__buttons">
+                                                            <button id="AddToCart" type="submit" name="add" class="btn product-form__submit button button--full-width button--secondary">
+                                                                <svg class="cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                                                <span>
+                                                                    U Korpu
+                                                                </span>
+                                                                <div class="loading-overlay__spinner hidden">
+                                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                                                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                            </div>
+
+
+
+
+                                            <hr class="hr">
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+                            <div class="col-sm-4 payment-content">
+                                <div class="cart-policy">
+                           
+                                    <div class="policy">
+                                        <div id="icon-cc231b2d-d537-47e2-ba2f-70d157bca4e5" class="policy-icon">
+                                        </div>
+                                        <div class="content">
+                                            <div class="policy-title">Isporuka</div>
+                                            <div class="policy-desc">Troškovi isporuke su besplatni za narudžbine preko 8.000,00 rsd.</div>
+                                        </div>
+                                        <style>
+                                            .cart-policy .policy #icon-cc231b2d-d537-47e2-ba2f-70d157bca4e5.policy-icon {
+                                                mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-02_40x40.png?v=1650445367);
+                                                -webkit-mask-image: url(//cdn.shopify.com/s/files/1/0633/2078/5125/files/services-02_40x40.png?v=1650445367);
+                                            }
+                                        </style>
+                                    </div>
+                                    <div class="security-bg">
+
+                                        <div class="security-text">
+                                            <div class="payment-security">Pravna lica</div>
+                                            <div class="payment-sec-cnt col-sm-12">
+                                                <img loading="lazy" height="50px" width="50px" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/05_50x50.png?v=1647422989" alt="service img">
+                                                <div class="security-content">
+                                                    <div class="security-title"> Pravna lica nas mogu kontaktirati radi ostvarivanja popusta.</div>
+                                                    <div class="security-subtitle">Pozovite nas 08h do 16h <br />013 402 840</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                    @*    <div class="security-bg">
+
+                                <div class="security-text">
+                                <div class="payment-security">Pravna lica</div>
+                                <div class="payment-sec-cnt col-sm-12">
+                                <img loading="lazy" height="50px" width="50px" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/05_50x50.png?v=1647422989" alt="service img">
+                                <div class="security-content">
+                                <div class="security-title"> Pravna lica nas mogu kontaktirati radi ostvarivanja popusta.</div>
+                                <div class="security-subtitle">Pozovite nas 08h do 16h <br />013 402 840</div>
+                                </div>
+                                </div>
+                                @*    <div class="payment-sec-cnt col-sm-12">
+                                <img loading="lazy" height="50" width="50" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/02_3721f16c-362f-450f-bca5-89319ea64326_50x50.png?v=1650084916">
+                                <div class="security-content">
+                                <div class="security-title">BIG SAVING ON</div>
+                                <div class="security-subtitle">WEEKENDS</div>
+                                </div>
+                                </div>
+                                <div class="payment-sec-cnt col-sm-12">
+                                <img loading="lazy" height="50" width="50" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/03_c4b04ab8-cf9a-4508-8bdd-e62414d4ebd6_50x50.png?v=1650084926">
+                                <div class="security-content">
+                                <div class="security-title">24H SUPPORT</div>
+                                <div class="security-subtitle">CONTACT US</div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+
+                                <div class="banner">
+                                <img loading="lazy" src="//cdn.shopify.com/s/files/1/0633/2078/5125/files/banner-01_db78eaca-e141-47f3-b584-d68494e5597c.jpg?v=1650085128" alt="product-banner">
+                                </div>*@
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-single__description rte demo">
+                            @* <div class="product_tab_wrapper col-xs-12">
+                        <ul class="tabs nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" aria-controls="tab-1" href="#tab-1">Opis/Detalji</a></li>
+
+                        <li><a data-toggle="tab" href="#tab-2" aria-controls="tab-2">Deklaracija</a></li>
+
+                        </ul>
+                        <div class="tab-container">
+                        <div id="tab-1" class="tab-pane fade in active" style="padding:10px;">
+                        </div>
+
+                        <div id="tab-2" class="tab-pane fade" style="padding:10px;">
+                        @Html.Raw(Model.Detail.Deklaracija)
+
+                        </div>
+                        </div>
+
+                        </div>*@
+
+                        <div class="tabset">
+                                @if (!String.IsNullOrEmpty(Model.Detail.OpisDetalj))
+                                {
+                                <input type="radio" name="tabset" id="tab1" aria-controls="opis" checked>
+                                <label for="tab1">Opis/Detalji</label>
+                                <!-- Tab 2 -->
+                                <input type="radio" name="tabset" id="tab2" aria-controls="deklaracija">
+                                <label for="tab2">Deklaracija</label>
+                                <div class="tab-panels">
+                                    <section id="opis" class="tab-panel" style="text-align: left;">
+                                            @Html.Raw(Model.Detail.OpisDetalj)
+                                    </section>
+                                    <section id="deklaracija" style="text-align: left;" class="tab-panel">
+                                            @Html.Raw(Model.Detail.Deklaracija)
+                                    </section>
+                                </div>
+                                }
+                                else
+                                {
+                                <input type="radio" name="tabset" id="tab1" aria-controls="deklaracija" checked>
+                                <label for="tab1">Deklaracija</label>
+                                <div class="tab-panels">
+
+                                    <section id="deklaracija" style="text-align: left;" class="tab-panel">
+                                            @Html.Raw(Model.Detail.Deklaracija)
+                                    </section>
+                                </div>
+                                }
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @section Scripts{
+
+    <script>
+        window.number_of_thumb = 4;
+        $(document).ready(function () {
+            $('.print').on('click', function (e) {
+                $('.demo').printThis({
+                    importStyle: $(this).hasClass('importStyle')
+                });
+            });
+        });
+        var result = jQuery('input.quantity1');
+        jQuery(result).change(function () {
+            var qty = result.val();
+            result.val(qty);
+        });
+        function downQty() {
+            var qty = result.val();
+            if (!isNaN(qty) && qty > 1) {
+                qty--;
+                result.val(qty);
+                return false;
+            }
+        }
+
+        function upQty() {
+            var qty = result.val();
+            if (!isNaN(qty)) {
+                qty++;
+                result.val(qty);
+                return false;
+            }
+        }
+
+        $("#Detail_ColorId").on("change", function () {
+            var selectedValue = this.value;
+
+            $.ajax({
+                type: "GET",
+                url: "Product/Index/?handler=ChangeProductByColor",
+                data: "c_id=" + selectedValue,
+                contentType: 'application/x-www-form-urlencoded',
+                dataType: "json",
+                //headers:
+                //{
+                //    "RequestVerificationToken": $('input:hidden[name="__RequestVerificationToken"]').val()
+                //},
+                beforeSend: function () {
+
+                },
+                success: function (data) {
+                    window.location = '/Product?id=' + data + '&model=false';
+                },
+                error: function (n, r) {
+
+                }
+            })
+
+        });
+        $("#Detail_SizeId").on("change", function () {
+            var selectedSize = this.value;
+            var selectedColor;
+            if ($("#single_size").val() == 'true') {
+
+                selectedColor = $("#color_single_id").text();
+            } else {
+                selectedColor = $("#Detail_ColorId").find(":selected").val();
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "Product/Index/?handler=ChangeProductByCSize",
+                data: "c_id=" + selectedColor + "&s_id=" + selectedSize,
+                contentType: 'application/x-www-form-urlencoded',
+                dataType: "json",
+                //headers:
+                //{
+                //    "RequestVerificationToken": $('input:hidden[name="__RequestVerificationToken"]').val()
+                //},
+                beforeSend: function () {
+
+                },
+                success: function (data) {
+                    $("#Article_Id").val(data.artikal_Id);
+                    $("#txt_barkod").html(data.barkod);
+                    $("#txt_sifra").html(data.sifra);
+                    $("#deklaracija").html(data.deklaracija);
+
+                },
+                error: function (n, r) {
+
+                }
+            })
+
+        });
+    </script>
+        @*<script src="js/option_selection.js" type="text/javascript"></script>*@
+
+ 
+
+    <script>
+        window.thumb_position = "vertical";
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function isIE() {
+                const ua = window.navigator.userAgent;
+                const msie = ua.indexOf('MSIE ');
+                const trident = ua.indexOf('Trident/');
+
+                return (msie > 0 || trident > 0);
+            }
+
+            if (!isIE()) return;
+            const hiddenInput = document.querySelector('#product-form-template--15813931270373__main input[name="id"]');
+            const noScriptInputWrapper = document.createElement('div');
+            const variantSwitcher = document.querySelector('variant-radios[data-section="template--15813931270373__main"]') || document.querySelector('variant-selects[data-section="template--15813931270373__main"]');
+            noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-template--15813931270373__main').textContent;
+            variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+
+            document.querySelector('#Variants-template--15813931270373__main').addEventListener('change', function (event) {
+                hiddenInput.value = event.currentTarget.value;
+            });
+        });
+    </script>
+    <script>
+        window.number_of_thumb = 4;
+        $(document).ready(function () {
+            $('.print').on('click', function (e) {
+                $('.demo').printThis({
+                    importStyle: $(this).hasClass('importStyle')
+                });
+            });
+
+            jQuery('body').addClass('product_sticky_design_1');
+            jQuery('body').addClass('product_sticky');
+
+        });
+    </script>
+        }

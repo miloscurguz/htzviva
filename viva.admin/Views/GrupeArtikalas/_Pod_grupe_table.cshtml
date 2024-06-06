@@ -1,0 +1,28 @@
+﻿@model viva.admin.Models.Grupe.Pod_Grupe_VM
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <h3 id="label_podgrupa_grupa"></h3>
+    <div>
+        <input id="hidden_grupa_id" type="hidden" />
+        <input id="input_add_pod_grupa" type="text"/> 
+        <button id="btn_add_pod_grupa" class="btn btn-info">Dodaj</button>
+    </div>
+    <div>
+
+    </div>
+    <table id="tbl_podgrupe" class="table table-striped">
+        <thead>
+            <tr><td>Naziv</td></tr>
+        </thead>
+        <tbody>
+            @foreach(var record in Model.Pod_Grupe)
+            {
+                <tr><td>@record.Naziv</td></tr>
+            }
+        </tbody>
+    </table>
+</div>

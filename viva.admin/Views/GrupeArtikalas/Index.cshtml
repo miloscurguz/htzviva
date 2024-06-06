@@ -1,0 +1,138 @@
+﻿@model IEnumerable<Data.Models.GrupeArtikala>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Grupe artikala</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @*     <th>
+            @Html.DisplayNameFor(model => model.SourceId)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.WebshopNaziv)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*     <td>
+            @Html.DisplayFor(modelItem => item.SourceId)
+            </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                @*    <td>
+            @Html.DisplayFor(modelItem => item.WebshopNaziv)
+            </td>*@
+                <td>
+                    @*  <a asp-action="Edit" asp-route-id="@item.Id">Promeni</a>*@
+                    <a href="#" data-gId="@item.Id" class="grupa_list_pod_grupa_link">Pod-grupe</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="modal fade" id="modal_podgrupe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pod-grupe</h2>
+            </div>
+            <div class="modal-body">
+                <div id="div_inner_body"></div>
+                <div class="modal-footer">
+
+                    <button data-dismiss="modal" type="button" class="btn btn-warning"> Izadji </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(".grupa_list_pod_grupa_link").on("click", function (e) {
+            var $modal = $("#modal_podgrupe");
+            var g_id = $(this).attr("data-gId");
+            $.ajax({
+                type: "GET",
+                url: '/GrupeArtikalas/Vrati_Podgrupe',
+                data: 'g_id=' + g_id,
+
+                dataType: "html",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+
+                //contentType: "application/json; charset=utf-8",
+                //dataType: "html",
+                success: function (data) {
+                    if (data != null) {
+                        $("#div_inner_body").html(data);
+                        $("#hidden_grupa_id").val(g_id);
+                        $("#btn_add_pod_grupa").on("click", function () {
+                            var naziv = $("#input_add_pod_grupa").val();
+                            if (naziv != '') {
+                                var g_id = $("#hidden_grupa_id").val();
+                                $.ajax({
+                                    type: "GET",
+                                    url: '/GrupeArtikalas/UbaciPodGrupu',
+                                    data: 'naziv=' + naziv + '&g_id=' + g_id,
+
+                                    dataType: "json",
+
+
+                                    //contentType: "application/json; charset=utf-8",
+                                    //dataType: "html",
+                                    success: function (data) {
+                                        if (data != null) {
+                                            var table = $("#tbl_podgrupe");
+                                            var newRow = "<tr><td>" + data.Naziv + "<td></tr>"
+                                            table.find("tbody").append(newRow);
+
+                                        } else {
+                                            alert("Podgrupa vec postoji!");
+                                        }
+
+                                    },
+                                    //processData: false,
+                                    //contentType: false,
+                                    error: function () {
+                                        alert("Doslo je do greske!");
+
+                                        $modal.modal("hide");
+                                    }
+                                });
+                            }
+
+
+                        });
+                    }
+
+                },
+                //processData: false,
+                //contentType: false,
+                error: function () {
+                    alert("Doslo je do greske!");
+
+                    $modal.modal("hide");
+                }
+            });
+            $modal.modal("show");
+        });
+
+
+    </script>
+
+ }

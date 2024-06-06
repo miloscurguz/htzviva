@@ -1,0 +1,746 @@
+﻿<style>
+    .header_1_wrapper {
+        background-color: #ffffff;
+    }
+
+        .header_1_wrapper .main-header {
+            background-color: #ffffff;
+        }
+
+    .header_1 .site-header__cart-count .cart-products-count, .header_1.site-header .compare-count {
+        color: #ffffff;
+        background: #f04706;
+    }
+
+    .tthorizontal_menu #tt-megamenu1 .tt-mega_menu1 li.tt_menu_item > a, .tthorizontal_menu #tt-megamenu1 .tt-mega_menu1 li.tt_menu_item span.categories {
+        color: #313c46;
+    }
+
+    .header_1 .right-link-icon .myaccount .dropdown-toggle, .header_1 .site-header__cart-count .cart-products-detail, .header_1 .wrapper-top-cart > .site-header_cart_link svg, .header_1 .wishlist-icon-div a svg, .header_1 .compare-icon-div a svg, .header_1.site-header .right-link-icon .contact .contact-text .contact_no, .header_1.site-header .right-link-icon .contact {
+        color: #313c46;
+    }
+
+        .header_1 .right-link-icon .myaccount .dropdown-toggle:hover, .header_1.site-header .right-link-icon .contact:hover svg, .header_1.site-header .right-link-icon .contact:hover .contact-text .contact_no, .header_1 .site-header_cart_link:hover .site-header__cart-count .cart-products-detail, .header_1 .wrapper-top-cart > .site-header_cart_link:hover svg, .header_1 .wrapper-top-cart > .site-header_cart_link.active svg, .header_1 .right-link-icon .myaccount .dropdown-toggle.open, .header_1 .wishlist-icon-div:hover a > i, .header_1 .compare-icon-div:hover a > i {
+            color: #f04706;
+        }
+
+    .header_1 .top-header, .top_header_1 .header_language .disclosure .language_wrapper, .header_1 .topright-header a,
+    .header_1.site-header span.language, .header_1.site-header span.currency,
+    .top_header_1 a.currency_wrapper.dropdown-toggle {
+        color: #666666;
+    }
+
+        .top_header_1 .header_language .disclosure .language_wrapper:hover, .header_1 .topright-header a:hover, .top_header_1 .header_language .disclosure .language_wrapper.active,
+        .top_header_1 .currency_wrapper.dropdown-toggle:hover, .top_header_1 .currency_wrapper.dropdown-toggle.active {
+            color: #f04706;
+        }
+
+    .header_1 .top_header_1 {
+        background-color: #f3f5f6;
+    }
+
+    .header_1 .bottom_header_1 {
+        background-color: #F8B131;
+    }
+
+    #tt-megamenu span.toggle_menu {
+        background: #F8B131;
+        color: #313c46;
+    }
+
+    .tt-mega-menu #tt-megamenu .tt-mega_menu {
+        background: #ffffff;
+    }
+
+    #tt-megamenu .tt-mega_menu .tt_menus_ul > li:hover > a {
+        color: #f04706;
+    }
+
+    #tt-megamenu .tt-mega_menu .tt_menus_ul > li > a {
+        color: #313c46;
+    }
+
+    .tt-mega-menu #tt-megamenu .tt-mega_menu {
+        border: 2px solid #F8B131;
+        border-top: transparent
+    }
+</style>
+
+<div id="shopify-section-header-model-1" class="shopify-section">
+
+    <header class="site-header page-element header_1" data-section-id="header-model-1" data-section-type="header-section">
+        <div class="header_1_wrapper">
+            <div class="top_header_1">
+                <div class="container">
+                    <div class="top-header-content">
+                        <div class="top-header">
+                            <span class="track-order" title="track-order">
+                                Spoljnostarčevačka 61 - 26000 Pančevo | web@htzviva.rs | 013 402 840 | 013 402 124 | 013 312 345
+                            </span>
+                        </div>
+                        <div class="topright-header">
+                            <a asp-area="" asp-page="/Onama" class="page1">O Nama</a>
+                            <a asp-area="" asp-page="/Contact" class="page2">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-sticky" class="main-header sticky_header">
+                <div class="container">
+                    <div class="center-header">
+                        <div class="header_logo_wrap">
+                            <div class="h1 header-logo" itemscope>
+
+                                <a href="/" itemprop="url">
+                                    <img loading="lazy" src="/img/HTZ VIVA Logo_Normal.jpg" alt="HTZ Viva" title="HTZ Viva Logo" itemprop="logo">
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="site-header__search icon-btn col-sm-6">
+                            <div class="search_wrapper">
+
+                                <label class="form-label--hidden">
+                                    <span class="visuallyhidden">Pretrazite proizvode</span>
+                                </label>
+                                <form action="/Shop/Index" method="get" class="input-group search-bar" role="search" id="custom-results">
+                                    <div class="collections-selector">
+                                        <select name="Group_Id" id="Group_Id" data-option="collection-option" class="single-option-selector">
+                                            <option selected="selected" value="all">Sve grupe</option>
+
+
+                                            <option value="620" data-product-types="">ZAŠTITA RUKU</option>
+                                            <option value="621" data-product-types="">ZAŠTITA OD PADA</option>
+                                            <option value="622" data-product-types="">ZAŠTITA DISAJNIH ORGANA</option>
+                                            <option value="625" data-product-types="">ZAŠTITA GLAVE</option>
+                                            <option value="623" data-product-types="">ZAŠTITA SLUHA</option>
+                                            <option value="624" data-product-types="">ZAŠTITA OČIJU</option>
+                                            <option value="626" data-product-types="">ZAŠTITNA I RADNA OBUĆA</option>
+                                            <option value="627" data-product-types="">ZAŠTITNA I RADNA ODEĆA</option>
+                                            <option value="628" data-product-types="">Ostalo</option>
+
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="type" value="product">
+                                    <input type="search" name="Keyword" id="Keyword" value="" placeholder="Pretraga" class="input-group-field" aria-label="Pretraga">
+                                    <span class="input-group-btn search-submit-wrap">
+                                        <button type="submit" class="btn search-submit icon-fallback-text">
+                                            <i class="mdi mdi-magnify"></i>
+                                            <span class="fallback-text">Pretraga</span>
+                                        </button>
+                                    </span>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="right-link-icon">
+                            <div class="contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6">
+                                    </path>
+                                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                </svg>
+                                <div class="contact-text">
+                                    <a class="contact_no" href="tel:(+361) 13 402 840">(+361) 13 402 840</a>
+                                    <span class="contact_detail">Pozovite</span>
+                                </div>
+                            </div>
+                            @*
+                            <div class="myaccount icon-btn">
+                            <span class="dropdown-toggle" title="My Account" data-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <div class="account-text">
+                            <span class="account-title">Moj Nalog</span>
+
+                            <div class="account-detail">
+
+                            <span>Login / </span>
+                            <span>Registracija</span>
+
+                            </div>
+
+                            </div>
+                            <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                            <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                            </span>
+                            <div class="customer_account">
+                            <ul>
+
+
+                            <li>
+                            <i class="mdi mdi-login"></i>
+                            <a href="/account/login" title="Login">Login</a>
+                            </li>
+                            <li>
+                            <i class="mdi mdi-account-plus-outline"></i>
+                            <a href="/account/register" title="Create Account">Napravi nalog</a>
+                            </li>
+
+
+                            </ul>
+                            </div>
+                            </div>*@
+                            @await  Component.InvokeAsync("Cart")
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_header_1">
+                <div class="container">
+                    <div class="ttresponsive_menu">
+
+                        <div id="shopify-section-TT-megamenu" class="shopify-section tt-mega-menu col-sm-3">
+                            <div id="tt-megamenu" class="tt-megamenu">
+                                <span class="toggle_menu current-close" title="menu-icon">
+                                    <i class="mdi mdi-menu"></i>
+                                    <span class="toggle_text">GRUPE PROIZVODA</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.000000 65.000000" preserveAspectRatio="xMidYMid meet">
+                                        <g transform="translate(0.000000,65.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                                            <path d="M510 575 l0 -65 65 0 65 0 0 65 0 65 -65 0 -65 0 0 -65z" /><path d="M260 325 l0 -65 65 0 65 0 0 65 0 65 -65 0 -65 0 0 -65z" /><path d="M510 325 l0 -65 65 0 65 0 0 65 0 65 -65 0 -65 0 0 -65z" />
+                                            <path d="M10 75 l0 -65 65 0 65 0 0 65 0 65 -65 0 -65 0 0 -65z" /><path d="M260 75 l0 -65 65 0 65 0 0 65 0 65 -65 0 -65 0 0 -65z" /><path d="M510 75 l0 -65 65 0 65 0 0 65 0 65 -65 0 -65 0 0 -65z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <div class="tt-mega_menu">
+                                    <ul class="tt_menus_ul">
+
+
+
+                                     
+                                        <li id="menu--be4cf303-d712-4952-9644-6081a70fd99d" class="tt_menu_item tt_mm_hassub ">
+                                            <a href="">
+
+                                                <span id="menuicon-be4cf303-d712-4952-9644-6081a70fd99d" class="icon">
+                                                    <img loading="lazy" src="~/img/katalog.png" alt="menu-icon">
+                                                </span>
+
+                                                <span class="tt_menu_item_heading_title">
+                                                    Katalog
+
+                                                </span>
+                                            </a>
+
+                                            <span class="mobile-nav__sublist-trigger">
+                                                <span class="mobile-nav__sublist-expand">
+                                                    <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                                                </span>
+                                                <span class="mobile-nav__sublist-contract">
+                                                    <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                                                </span>
+                                            </span>
+                                            <div class="tt_sub_menu_wrap" style="width:850px">
+
+
+                                                <style>
+                                                    #tt-megamenu #menu--be4cf303-d712-4952-9644-6081a70fd99d.tt_menu_item .tt_sub_menu_wrap.bg_img {
+                                                        padding: 20px 15px 30px 15px;
+                                                        background-attachment: scroll;
+                                                        background-repeat: no-repeat;
+                                                        background-position: bottom;
+                                                        background-image: url('//themes-gudgets.myshopify.com/cdn/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.gif');
+                                                    }
+
+                                                    @@media(max-width:991px) {
+                                                        #tt-megamenu #menu--be4cf303-d712-4952-9644-6081a70fd99d.tt_menu_item .tt_sub_menu_wrap.bg_img {
+                                                            background-image: none;
+                                                        }
+                                                    }
+                                                </style>
+
+
+
+
+                                                <div class="tt_sub_menu" style="width:200px">
+
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="620" asp-route-Sub_Group_Id="0">ZAŠTITA RUKU</a>
+                                                    </h4>
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="649">JEDNOKRATNE RUKAVICE</a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="650">
+                                                                ZAŠTITNE RUKAVICE
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="651">
+                                                                RADNE RUKAVICE
+
+                                                            </a>
+                                                        </li>
+
+
+                                                    </ul>
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="621" asp-route-Sub_Group_Id="0">ZAŠTITA OD PADA</a>
+                                                    </h4>
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="644">
+                                                                UŽAD, GURTNE I APSORBERI ENERGIJE
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="645">
+                                                                KOČNICE I MEHANIZMI
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="646">
+                                                                KARABINI I SIDRIŠTA
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="647">
+                                                                OPASAČI
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="648">
+                                                                DODATNA OPREMA
+
+
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="625" asp-route-Sub_Group_Id="0">ZAŠTITA GLAVE</a>
+                                                    </h4>
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="636">
+                                                                KAPE I KAČKETI
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="637">
+                                                                ŠLEMOVI I ZAŠTITNE KAPE
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="638">
+                                                                VIZIRI I NOSAČI VIZIRA
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="639">
+                                                                MASKE ZA ZAVARIVANJE
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="640">
+                                                                NAOČARE
+
+
+
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+
+                                                <div class="tt_sub_menu" style="width:200px">
+                                                
+
+                                                 
+
+
+
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="623" asp-route-Sub_Group_Id="0">ZAŠTITA SLUHA</a>
+                                                    </h4>
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="652">
+                                                                UDODATNA OPREMA
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="653">
+                                                                UŠNI ČEPIĆI I ANTIFONI
+
+
+
+
+                                                            </a>
+                                                        </li>
+
+
+                                                    </ul>
+                                                     <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="626" asp-route-Sub_Group_Id="0">ZAŠTITNA I RADNA OBUĆA</a>
+                                                    </h4>
+
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="676">
+                                                                DUBOKE CIPELE
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="629">
+                                                                ČIZME
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="630">
+                                                                PLITKE CIPELE
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="677">
+                                                                KLOMPE/PAPUČE
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="678">
+                                                                SANDALE
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="680">
+                                                                OPREMA ZA VARIOCE
+
+
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="622" asp-route-Sub_Group_Id="0">ZAŠTITA DISAJNIH ORGANA</a>
+                                                    </h4>
+
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="634">
+                                                                JEDNOKRATNE MASKE
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="635">
+                                                                MASKE I POLUMASKE SA PRIPADAJUĆIM FILTERIMA
+
+
+                                                            </a>
+                                                        </li>
+
+
+
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="tt_sub_menu" style="width:200px">
+
+
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="624" asp-route-Sub_Group_Id="0">ZAŠTITA OČIJU</a>
+                                                    </h4>
+
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="642">
+                                                                NAOČARE
+                                                            </a>
+                                                        </li>
+
+
+
+                                                    </ul>
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="627" asp-route-Sub_Group_Id="0">ZAŠTITNA I RADNA ODEĆA</a>
+                                                    </h4>
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="682">
+                                                                MAJICE, POLO MAJICE I DUKSERICE
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="683">
+                                                                JAKNE I PRSLUCI
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="684">
+                                                                SPORTSKA OPREMA
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="685">
+                                                                POSLOVNA OPREMA
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="686">
+                                                                RADNA ODELA, BLUZE I PANTALONE
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="687">
+                                                                KOMBINEZONI I POLUKOMBINEZONI
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="688">
+                                                                ŠORTSEVI
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="689">
+                                                                KIŠNA ODELA I KABANICE
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="690">
+                                                                MANTILI I KECELJE
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="691">
+                                                                OPREMA ZA VARIOCE
+
+
+
+                                                            </a>
+                                                        </li>
+
+
+                                                    </ul>
+
+
+
+
+                                                </div>
+
+                                                <div class="tt_sub_menu" style="width:200px">
+                                                    <h4 class="sub_mn_title">
+                                                        <a asp-page="/Shop/Index" asp-route-Group_Id="628" asp-route-Sub_Group_Id="0">OSTALO</a>
+                                                    </h4>
+                                                    <ul class="tt_sub_menu_linklist">
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="654">
+                                                               PEŠKIRI
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="655">
+                                                                MANTILI I KECELJE
+
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="656">
+                                                                ŠTITNICI ZA KOLENA
+
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="657">
+                                                                JEDNOKRATNA UPOTREBA
+
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="658">
+                                                               CERADE
+
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="659">
+                                                                ČUNJEVI
+
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="660">
+                                                                OPREMA ZA VARIOCE
+
+
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="665">
+                                                                KOČNICE I MEHANIZMI
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="667">
+                                                                PRVA POMOĆ I NOSILA
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="670">
+                                                                KARABINI I SIDRIŠTA
+
+
+
+                                                            </a>
+                                                        </li>
+                                                          <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="674">
+                                                                PROTIVPOŽARNI APARATI
+
+
+
+
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="666">
+                                                                DODATNA OPREMA
+
+
+
+
+                                                            </a>
+                                                        </li>
+
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    @*        <div class="wish-com">
+
+                    <div class="wishlist-icon-div">
+                    <a class="wishlist" href="/pages/wishlist" title="Wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><div class="wishlist-icon text">Wishlist</div></a>
+                    </div>
+
+
+                    <div class="compare-icon-div">
+                    <a class="compare" href="/pages/compare" title="Compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-ccw"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline>
+                    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg><div class="compare-icon">Compare</div><span class="compare-count"></span></a>
+                    </div>
+
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

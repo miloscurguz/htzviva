@@ -1,0 +1,732 @@
+﻿@model viva.admin.Models.Artikli.ArtikalDetailModelView
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    /*
+                                             CSS for the main interaction
+                                            */
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+    }
+
+    /*
+                                             Styling
+                                            */
+    body {
+        font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+        color: #333;
+        font-weight: 300;
+    }
+
+    .tabset > label {
+        position: relative;
+        display: inline-block;
+        padding: 15px 15px 25px;
+        border: 1px solid transparent;
+        border-bottom: 0;
+        cursor: pointer;
+        font-weight: 600;
+        margin-bottom: -0.5rem;
+    }
+
+        .tabset > label::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+            width: 22px;
+            height: 4px;
+            background: #8d8d8d;
+        }
+
+        .tabset > label:hover,
+        .tabset > input:focus + label {
+            color: #06c;
+        }
+
+            .tabset > label:hover::after,
+            .tabset > input:focus + label::after,
+            .tabset > input:checked + label::after {
+                background: #06c;
+            }
+
+    .tabset > input:checked + label {
+        border-color: #ccc;
+        border-bottom: 1px solid #fff;
+        margin-bottom: -1px;
+    }
+
+    .tab-panel {
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+</style>
+<h1>Detalji Artikla</h1>
+
+<h4>@Model.Naziv</h4>
+<input type="hidden" asp-for="Id" />
+<input type="hidden" asp-for="Artikal_Id" />
+<hr />
+<div>
+    <a asp-action="Index">Nazad na listu artikala</a>
+</div>
+
+<div class="tabset">
+    <!-- Tab 1 -->
+    <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+    <label for="tab1">Detalji</label>
+    <!-- Tab 2 -->
+    <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+    <label for="tab2">Slike</label>
+    <!-- Tab 3 -->
+    <input type="radio" name="tabset" id="tab3" aria-controls="deklaracija">
+    <label for="tab3">Deklaracija</label>
+    <div class="tab-panels">
+        <section id="marzen" class="tab-panel">
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit" id="formEdit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="Artikal_Id" />
+                        @if (Model.Svojstva.Count > 0)
+                        {
+                            <label class="control-label">Svojstva</label>
+                            <hr />
+                            <table class="table">
+                                <thead>
+                                    <tr><td>Naziv</td><td>Vrednost</td></tr>
+
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Svojstva)
+                                    {
+                                        <tr>
+                                            <td>@item.Naziv</td>
+                                            <td>@item.Vrednost</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <label class="control-label">Cene</label>
+                                <hr />
+                                <label asp-for="Model_Id" class="control-label"></label>
+                                <input type="text" class="form-control" asp-for="Model_Id" />
+                                <br />
+                                <input type="hidden" asp-for="Model_Id_Old" />
+                                <a asp-action="Model_Edit" asp-controller="Artikals" asp-route-id="@Model.Model_Id" target="_blank">@Model.Model_Naziv</a>
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label asp-for="Source" class="control-label"></label>
+                                <input type="text" class="form-control" asp-for="Source" />
+                            </div>
+                            <div class="col">
+                                <label asp-for="VpCena" class="control-label"></label>
+
+
+                                <input disabled type="text" class="form-control" asp-for="VpCena" />
+                            </div>
+
+                            <div class="col">
+                                <label class="control-label">Stanje</label>
+                                <span type="text" class="form-control">10</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label asp-for="Boja" class="control-label"></label>
+
+
+                                <input type="text" class="form-control" asp-for="Boja" />
+                            </div>
+
+                            <div class="col">
+                                <label asp-for="Velicina" class="control-label"></label>
+                                <input type="text" class="form-control" asp-for="Velicina" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Webshop_Naziv" class="control-label">Webshop Naziv</label>
+                            <input type="text" class="form-control" asp-for="Webshop_Naziv" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Opis" class="control-label">Opis Kratki</label>
+                            <hr />
+
+                            <textarea asp-for="Opis" class="form-control" rows="10" cols="80"></textarea>
+                            <span asp-validation-for="Opis" class="text-danger"></span>
+                            <br />
+                            <br />
+                            <label asp-for="Opis2" class="control-label">Opis Detaljan</label>
+                            <hr />
+
+                            <textarea asp-for="Opis2" class="form-control" rows="10" cols="80"></textarea>
+                            <span asp-validation-for="Opis2" class="text-danger"></span>
+                            <br /><br />
+                            <input type="checkbox" asp-for="OpisOverride" />
+                            <label asp-for="OpisOverride"> Ne sinhronizuj Opis (umesto sinhronizovanog opisa, stajace rucno unesen opis.)</label><br>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OpisSEO" class="control-label">Opis za pretragu (Maksimalno 60 karaktera)</label>
+                            <hr />
+                            <input type="text" cols="40" rows="5" maxlength="60" class="form-control" asp-for="OpisSEO" />
+
+                        </div>
+                        <label class="control-label">Cene</label>
+                        <hr />
+                        <div class="form-row">
+                            <div class="col">
+                                <label class="control-label">Nabavna Cena</label>
+                                <input disabled type="text" class="form-control" asp-for="VpCena" />
+                            </div>
+                            <div class="col">
+                                <label class="control-label">Maloprodajna cena</label>
+
+
+                                <input type="text" class="form-control" asp-for="MpCena" />
+                            </div>
+                            <div class="col">
+                                <label class="control-label">Popust %c</label>
+
+
+                                <input type="text" class="form-control" asp-for="Popust" />
+                            </div>
+
+                            <div class="col">
+                                <label asp-for="FinalnaCena" class="control-label"></label>
+
+
+                                <input disabled type="text" class="form-control" asp-for="FinalnaCena" />
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Deklaracija" class="control-label">Deklaracija</label>
+                            <hr />
+
+                            <textarea asp-for="Deklaracija" class="form-control" rows="10" cols="80"></textarea>
+                            <span asp-validation-for="Deklaracija" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Snimi" class="btn btn-primary" />
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="rauchbier" class="tab-panel">
+
+            <div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <h4>Slike</h4>
+
+                        <input type="hidden" asp-for="Model_Id" />
+                        <hr />
+                        <div>
+                            <div>
+                                <button id="btn_modal_add_main_image" class="btn btn-primary"><i class="fa fa-plus"></i> Dodaj sliku</button>
+                            </div>
+                            <hr />
+                            <div id="div_table_img">
+                                <table id="tbl_slike">
+                                    <tbody>
+                                        @if (Model.MainImage != null)
+                                        {
+                                            <tr class="main-img">
+                                                <td>
+                                                    @if (Model.Image_Source.Trim() == "extern")
+                                                    {
+                                                        <img id="img_main" src="@Model.MainImage" alt="" style="max-height:300px; max-width:300px" />
+
+                                                    }
+                                                    else
+                                                    {
+                                                        <img id="img_main" src="@Url.Action("SomeImage", "Artikals", new { imageName = Model.MainImage.Trim() })" alt="" style="max-height:300px; max-width:300px" />
+
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <button type="button" data-main="true" class="btn btn-danger btn_remove_image"><i class="fa fa-trash"></i></button>
+                                                    <button type="button" data-main="true" class="btn btn-success"><i class="fa fa-home"></i></button>
+                                                </td>
+                                            </tr>
+
+                                        }
+                                        @if (Model.DodatneSlike != null && Model.DodatneSlike.Count > 0)
+                                        {
+                                            @foreach (var slika in Model.DodatneSlike)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        @if (slika.Source.Trim() == "extern")
+                                                        {
+                                                            <img src="@slika.Name.Trim()" alt="" style="max-height:300px; max-width:300px" />
+
+                                                        }
+                                                        else
+                                                        {
+                                                            <img src="@Url.Action("SomeImage", "Artikals", new { imageName = slika.Name.Trim() })" alt="" style="max-height:300px; max-width:300px" />
+
+                                                        }
+
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" data-id="@slika.Id" data-main="false" class="btn btn-danger btn_remove_image"><i class="fa fa-trash"></i></button>
+                                                        <button type="button" data-id="@slika.Id" data-main="false" class="btn_set_to_main btn btn-secondary"><i class="fa fa-home"></i></button>
+                                                    </td>
+                                                </tr>
+
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            @*   @if (Model.MainImage != null)
+                            {
+                            <div>
+                            @if (Model.Image_Source.Trim() == "extern")
+                            {
+                            <img id="img_main" src="@Model.MainImage" alt="" style="max-height:400px; max-width:400px" />
+
+                            }
+                            else
+                            {
+                            <img id="img_main" src="@Url.Action("SomeImage", "Artikals", new { imageName = Model.MainImage.Trim() })" alt="" style="max-height:400px; max-width:400px" />
+
+                            }
+                            </div>
+
+                            <div>
+                            <button type="submit" class="btn btn-danger" asp-action="ObrisiGlavnuSliku">Obrisi sliku</button>
+                            </div>
+                            } *@
+
+
+
+                        </div>
+
+                        <br />
+
+
+
+
+                    </div>
+                    @*    <div class="col-md-6">
+                    <h4>Dodatne slike:</h4>
+                    <hr />
+                    <div>
+                    <button class="btn btn-primary"><i class="fa fa-plus"></i> Dodaj sliku +</button>
+                    </div>
+                    <div>
+                    <form asp-action="SnimiDodatneSlike" enctype="multipart/form-data" method="post" id="formAdditionalImages">
+                    <input type="file" name="files" multiple required />
+                    <input type="hidden" asp-for="Model_Id" />
+                    <button type="submit" class="btn btn-primary" asp-action="SnimiDodatneSlike">Upload to File System</button>
+                    </form>
+
+                    @if (Model.DodatneSlike != null && Model.DodatneSlike.Count > 0)
+                    {
+                    <table>
+                    <tr>
+                    <th>Slika</th>
+                    <th>Akcija</th>
+                    </tr>
+
+                    <tbody>
+                    @foreach (var slika in Model.DodatneSlike)
+                    {
+                    <tr>
+                    <td>
+                    @if (slika.Source.Trim() == "extern")
+                    {
+                    <img src="@slika.Name.Trim()" alt="" style="max-height:200px; max-width:200px" />
+
+                    }
+                    else
+                    {
+                    <img src="@Url.Action("SomeImage", "Artikals", new { imageName = slika.Name.Trim() })" alt="" style="max-height:200px; max-width:200px" />
+
+                    }
+
+                    </td>
+                    <td>
+                    <button type="submit" class="btn btn-danger" asp-action="ObrisiGlavnuSliku">Obrisi sliku</button>
+                    </td>
+                    </tr>
+
+                    }
+                    </tbody>
+                    </table>
+
+                    }
+
+
+                    </div>
+
+
+                    </div> *@
+                </div>
+            </div>
+
+
+
+        </section>
+        @* <section id="deklaracija" class="tab-panel">
+
+        <div>
+        <div class="row">
+        <div class="col-md-6">
+        </div>
+        </div>
+        </div>
+
+
+
+        </section>*@
+    </div>
+
+
+
+    <hr />
+    <div class="modal fade" id="modal_add_image" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Snimi sliku</h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input checked type="radio" id="rb_extern" name="slika_source" value="extern">
+                        <label for="html">EXTERN</label>
+                        @* <input  type="radio" id="rb_intern" name="slika_source" value="intern">
+                        <label for="css">INTERN</label><br> *@
+                    </div>
+                    <div id="div_intern" style="display:none">
+                        <input type="file" style="display:none;" name="files" id="file_add_main_image" />
+                        <input type="button" value="Izaberite sliku ... " onclick="document.getElementById('file_add_main_image').click();" />
+                    </div>
+                    <div id="div_extern">
+                        <label for="txt_url">
+                            Unestie link slike
+
+                            <input id="txt_url" type="text" value="" />
+                        </label>
+                        <br />
+                        <button id="btn_extern_preview" class="btn btn-success">Prikazi</button>
+                    </div>
+
+                    <br />
+                    <img style="width:400px" id="image_upload_preview" src="http://placehold.it/400x400" alt="your image" />
+                    <br />
+                    <div>
+                        <input type="checkbox" id="chb_na_model" />
+                        <label for="chb_na_model"> Postavi kao sliku modela</label><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="chb_na_ostale_artikle" />
+                        <label for="chb_na_ostale_artikle"> Postavi sliku na druge artikle</label><br>
+                        <div style="display:none" id="div_drugi_artikli">
+                            <input id="hf_artikli_dovedeni" type="hidden" value="false" />
+                            <table id="tbl_artikli_slike" class="table">
+                                <thead>
+                                    <tr>
+                                        <td>Naziv</td>
+                                        <td>Boja</td>
+                                        <td>Velicina</td>
+                                        <td><input type="checkbox" id="chb_select_all"/></td>
+                                    </tr>
+                                </thead>
+                            
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn_save_image" class="btn btn-success btn-ok">Snimi</button>
+                    <button data-dismiss="modal" type="button" class="btn btn-warning"> Odustani </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+        <script src="~/js/ckeditor.js"></script>
+        <script>
+            let array_slike = [];
+             ClassicEditor
+                .create(document.querySelector('#Opis'), {
+                mediaEmbed: {
+                    previewsInData: true
+                },
+            })
+            .then(editor => {
+                window.editor = editor;
+            })
+            .catch(err => {
+                console.error(err.stack);
+            });
+            ClassicEditor
+                .create(document.querySelector('#Opis2'), {
+                    mediaEmbed: {
+                        previewsInData: true
+                    },
+                })
+                .then(editor => {
+                    window.editor = editor;
+                })
+                .catch(err => {
+                    console.error(err.stack);
+                });
+            // CKEDITOR.replace('Opis');
+            // CKEDITOR.replace('Opis2');
+            // CKEDITOR.replace('Deklaracija');
+            $("btnSyncAll").on("click", function (e) {
+                e.preventDefault;
+                $("#Sve").val(true);
+                $("#Sifra").val("");
+                $("#mainForm").submit();
+            });
+
+            $("btnSyncSingle").on("click", function (e) {
+                e.preventDefault;
+                $("#Sve").val(false);
+                $("#mainForm").submit();
+            });
+
+            $("#btn_modal_add_main_image").on("click", function (e) {
+                var $modal = $("#modal_add_image");
+                $modal.modal("show");
+            });
+            $("#btn_extern_preview").on("click", function () {
+                let url = $("#txt_url").val();
+
+                $("#image_upload_preview").attr('src', url);
+            });
+            $("#chb_select_all").on("change", function () {
+                if ($("#chb_select_all").is(":checked")) {
+                    $(".chb_slike").prop("checked", true);
+                }else{
+                    $(".chb_slike").prop("checked", false);
+                }
+                
+                array_slike = [];
+                $('.chb_slike:checked').each(function () {
+                    array_slike.push($(this).attr("data-id"));
+                });
+            });
+            $("#chb_na_ostale_artikle").on("change", function () {
+                var artikal_id = $("#Artikal_Id").val();
+                if ($("#chb_na_ostale_artikle").is(":checked")) {
+                    var data_exist = $("#hf_artikli_dovedeni").val();
+                    if (data_exist === "false");
+                    {
+                        $.ajax({
+                            type: 'GET',
+                            url: '/Artikals/Artikli_Za_Izbor_Slike',
+                            data: "a_id=" + artikal_id,
+                            success: function (data) {
+                                if (data != null) {
+                                    $("#hf_artikli_dovedeni").val("true");
+                                    var $table_body = $("#tbl_artikli_slike").find("tbody");
+                                    $.each(data, function (i, e) {
+                                        $table_body.append("<tr><td>" + e.Naziv + "</td><td>" + e.Boja + "</td><td>" + e.Velicina +
+                                            "</td><td><input type='checkbox'class='chb_slike' name='chb_slike' data-id='"+e.Id+"' /></td></tr>");
+                                    });
+                                    $(".chb_slike").on("change", function () {
+                                        array_slike = [];
+                                        $('.chb_slike:checked').each(function () {
+                                            array_slike.push($(this).attr("data-id"));
+                                        });
+                                    });
+                                }
+                            },
+                            error: function () {
+                                alert("Whoops something went wrong!");
+                            }
+                        });
+                    }
+                    $("#div_drugi_artikli").show();
+                } else {
+                    $("#div_drugi_artikli").hide();
+                }
+            });
+            $("#btn_save_image").on("click", function (e) {
+                var input = document.getElementById("file_add_main_image");
+                var files = input.files;
+                var artikal_id = $("#Artikal_Id").val();
+                let url = $("#txt_url").val();
+                var copy_to_model = $("#chb_na_model").is(":checked");
+                var copy_to_another_articles = $("#chb_na_ostale_artikle").is(":checked");
+                var another_articles=""
+                if ($("#chb_na_ostale_artikle").is(":checked")){
+                    another_articles = array_slike.join();
+                }
+                let source = "extern";
+                if (source == "extern") {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/Artikals/Artikal_Snimi_Sliku_Extern',
+                        data: "a_id=" + artikal_id + "&url=" + url + "&set_as_model_img=" + copy_to_model +
+                            "&set_to_another_articles=" + copy_to_another_articles + "&another_articles="+another_articles,
+                        success: function (status) {
+                            if (status != null) {
+                                // if ($('#img_main').length) {
+                                //     $("#img_main").attr("src", status);
+                                // } else {
+                                //     $("#div_table_main_img").html(
+                                //         "<table><tbody><tr>" +
+                                //         "<td><img id='img_main' src='" + status + "' alt='' style='max-height: 400px; max-width: 400px' /></td>" +
+                                //         "<td><button type='button' class='btn btn-danger' id='btn_remove_main_img'><i class='fa fa-trash'></i></button></td>"
+                                //         + "</tr></tbody></table>");
+
+                                // }
+                                var table_body = $("#tbl_slike");
+                                $(table_body).find("tbody").append(
+                                   "<tr>" +
+                                   "<td><img src='" + status + "' alt='' style='max-height: 300px; max-width: 300px' /></td>" +
+                                    "<td><button type='button' data-id='1' data-main='false' class='btn btn-danger btn_remove_image'><i class='fa fa-trash'></i></button>"+
+                                    "<button type='button' data-id='1' data-main='false' class='btn_set_to_main btn btn-secondary'><i class='fa fa-home'></i></button></td>"
+                                  +"</tr>"
+                                );
+                                var $modal = $("#modal_add_image");
+                                $modal.modal("hide");
+
+                            }
+                        },
+                        error: function () {
+                            alert("Whoops something went wrong!");
+                        }
+                    });
+                }
+                else {
+                    sendFile(files);
+                }
+
+            });
+            $(".btn_set_to_main").on("click", function () { 
+            
+            });
+            $(".btn_remove_image").on("click", function () {
+                let id = $(this).attr("data-id");
+                let isMain = $(this).attr("data-main");
+                let parentRow = $(this).parent().parent();
+                var artikal_id = $("#Artikal_Id").val();
+                $.ajax({
+                    type: 'GET',
+                    url: '/Artikals/Artikal_Obrisi_Sliku',
+                    data: "id=" + id + "&a_id=" + artikal_id + "&isMain=" + isMain + "&source=extern",
+                    success: function (status) {
+                        if (status != null) {
+                          if(status===true){
+                                $(parentRow).hide('slow', function () { $(parentRow).remove(); });
+
+                          }
+                           
+
+                        }
+                    },
+                    error: function () {
+                        alert("Whoops something went wrong!");
+                    }
+                });
+            });
+
+            
+
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $("#file_add_main_image").change(function () {
+                readURL(this);
+            });
+            $("#Popust").on("change", function () {
+                var popust = $(this).val();
+                var cena = $("#MpCena").val();
+                var popust_cena = parseFloat(cena) - (parseFloat(cena) * (parseFloat(popust) / 100));
+                $("#CenaPopust").val(popust_cena);
+            });
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#image_upload_preview').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            function sendFile(files) {
+
+                var formData = new FormData();
+                //formData.append('file', $('#file_add_main_image')[0].files[0]);
+                for (var i = 0; i != files.length; i++) {
+
+                    formData.append("files", files[i]);
+
+                }
+                formData.append("id", "2");
+
+                $.ajax({
+                    type: 'post',
+                    url: '/Artikals/SnimiGlavnuSliku',
+                    data: formData,
+                    success: function (status) {
+                        if (status != 'error') {
+                            var $modal = $("#modal_add_image");
+                            $modal.modal("hide");
+                            var img_main = $("#img_main");
+                            img_main.attr("src", status);
+                            var img_preview = $("#image_upload_preview");
+                            img_preview.attr("src", "http://placehold.it/400x400");
+
+
+                        }
+                    },
+                    processData: false,
+                    contentType: false,
+                    error: function () {
+                        alert("Whoops something went wrong!");
+                    }
+                });
+            }
+        </script>
+
+    }
+

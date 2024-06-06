@@ -1,0 +1,568 @@
+﻿@page
+@model viva.webstore.Pages.Cart.ConfirmationModel
+@{
+}
+<style>
+    .section {
+        position: relative;
+    }
+
+    .section__content {
+        zoom: 1;
+    }
+
+        .section__content:after, .section__content:before {
+            content: "";
+            display: table;
+        }
+
+    .content-box:first-of-type, .content-box-spacing:first-of-type {
+        margin-top: 0;
+    }
+
+    .content-box {
+        border-color: #d9d9d9;
+    }
+
+    .content-box, .content-box-spacing {
+        margin-top: 1em;
+    }
+
+    .content-box {
+        background: transparent;
+        background-clip: padding-box;
+        border: 1px solid;
+        border-radius: 5px;
+        color: #545454;
+    }
+
+    .content-box__row {
+        padding: 1.1428571429em;
+        position: relative;
+        zoom: 1;
+    }
+
+    .display-table .content-box__row {
+        display: table;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .content-box__row:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+
+    .content-box__row:first-child {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .radio-wrapper:last-child, .checkbox-wrapper:last-child {
+        margin-bottom: 0;
+    }
+
+    .display-table .radio-wrapper, .display-table .checkbox-wrapper {
+        display: table;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .input-radio:checked {
+        border-width: 7px;
+    }
+
+    .input-checkbox:checked, .input-radio:checked {
+        border-color: #999999;
+    }
+
+    .content-box .input-checkbox, .content-box .input-radio {
+        border-color: #d9d9d9;
+        background-color: white;
+    }
+
+    .main .input-checkbox, .main .input-radio {
+        border-color: #d9d9d9;
+        background-color: white;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .input-radio {
+        border-radius: 50%;
+    }
+
+    .input-checkbox, .input-radio {
+        width: 18px;
+        height: 18px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        cursor: pointer;
+        vertical-align: -4px;
+        border: 1px solid;
+    }
+
+    .radio-wrapper, .checkbox-wrapper {
+        zoom: 1;
+        margin-bottom: 1em;
+    }
+
+        .radio-wrapper:after, .radio-wrapper:before, .checkbox-wrapper:after, .checkbox-wrapper:before {
+            content: "";
+            display: table;
+        }
+
+    .display-table .radio__input, .display-table .checkbox__input {
+        display: table-cell;
+    }
+
+    .radio__input, .checkbox__input {
+        padding-right: 0.75em;
+        white-space: nowrap;
+    }
+
+    .display-table .radio__label, .display-table .checkbox__label {
+        display: table-cell;
+        width: 100%;
+    }
+
+    .radio__label, .checkbox__label {
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+    .product-thumbnail {
+        width: 4.6em;
+        height: 4.6em;
+        border-radius: 8px;
+        background: #fff;
+        position: relative;
+    }
+
+    .display-table .radio__label__primary {
+        display: table-cell;
+        width: 100%;
+    }
+
+    .radio__label__primary {
+        cursor: inherit;
+        font-family: inherit;
+        vertical-align: top;
+    }
+
+    .display-table .radio__input, .display-table .checkbox__input {
+        display: table-cell;
+    }
+
+    .radio__input, .checkbox__input {
+        padding-right: 0.75em;
+        white-space: nowrap;
+    }
+
+    .product-thumbnail__wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+    .product-thumbnail__quantity {
+        font-size: 0.8571428571em;
+        font-weight: 500;
+        line-height: 1.75em;
+        white-space: nowrap;
+        text-align: center;
+        border-radius: 1.75em;
+        background-color: rgba(114,114,114,0.9);
+        color: #fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-width: 1.75em;
+        height: 1.75em;
+        padding: 0 0.5833333333em;
+        position: absolute;
+        right: -0.75em;
+        top: -0.75em;
+        z-index: 3;
+    }
+        .cart-policy .policy .policy-icon {
+                color: #000000;
+                background: #000000;
+                   width: 65px !important;
+            }
+</style>
+<div class="breadcrumb-wrap">
+    <div class="container">
+
+        <span class="title">Potvrda</span>
+        <div class="breadcrumb">
+            <a href="/" title="Back to the frontpage"><i class="mdi mdi-home-outline"></i></a>
+
+            <span aria-hidden="true" class="breadcrumb__sep">&gt;</span>
+            <span>Potvrda</span>
+        </div>
+
+    </div>
+</div>
+<div class="pagecontent payment-page">
+    <div class="container">
+
+        <div class="step col-sm-6" data-step="shipping_method" data-last-step="false">
+            <form class="edit_checkout" data-shipping-method-form="true" data-ignore-floating-label="true" accept-charset="UTF-8" method="post">
+                <input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="3EqTEABozRBygv51ljO0yRxd-69Fs2gUtBBb6MMX6zHIiXc6TB_yRVw2En5k8Ck2DF_g4QDK56WBEW4Z3lXUZg" autocomplete="off">
+
+                <input type="hidden" name="previous_step" id="previous_step" value="shipping_method" autocomplete="off">
+                <input type="hidden" name="step" value="payment_method" autocomplete="off">
+
+
+
+                <div class="step__sections">
+                    <h3 class="visually-hidden-if-js">Potvrda</h3>
+                    <div>
+                        @if (!String.IsNullOrEmpty(Model.VM.Napomena))
+                        {
+                            <div class="cart__note field">
+                                <label for="Cart-note">Napomena prodavcu</label>
+                                <p style="padding-left:10px" name="note">@Model.VM.Napomena</p>
+                            </div>
+                        }
+                    </div>
+                    <div>
+                        <div class="cart__note field">
+                            <label>Tip kupca</label>
+                            <div class="content-box__row">
+                                <div class="radio-wrapper" data-shipping-method="">
+                                    <div class="radio__input" style="float:left">
+                                        <p>@Model.VM.Tip_Kupca_Tekst</p>
+                                    </div>
+
+                                </div> <!-- /radio-wrapper-->
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr />
+                    <div>
+                        <div class="cart__note field">
+                            <label>Način isporuke</label>
+                            <div class="content-box__row">
+                                <div class="radio-wrapper" data-shipping-method="">
+                                    <div class="radio__input" style="float:left">
+                                        <p>@Model.VM.Nacin_Isporuke_Tekst</p>
+                                    </div>
+                                </div> <!-- /radio-wrapper-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div>
+                        <div class="cart__note field">
+                            <label>  Način placanja</label>
+
+
+
+                            <div class="content-box__row">
+                                <div class="radio-wrapper" data-shipping-method="">
+                                    <div class="radio__input" style="float:left">
+                                        <p>@Model.VM.Nacin_Placanja_Tekst</p>
+                                    </div>
+                                </div> <!-- /radio-wrapper-->
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <hr />
+                    <div id="div_osnovni_podaci">
+                        <div class="cart__note field">
+                            <label>Osnovni podaci</label>
+                            <hr />
+                            <div style="padding-left:20px;">
+                                <label for="txt_email">Email</label>
+                                <span>@Model.VM.Email</span>
+                                @if (Model.VM.Tip_Kupca == 1)
+                                {
+
+                                    <div id="div_txt_ime">
+                                        <label for="txt_ime">Ime</label>
+                                        <span>@Model.VM.Ime</span>
+                                    </div>
+                                    <div id="div_txt_prezime">
+
+                                        <label for="txt_prezime">Prezime</label>
+                                        <span>@Model.VM.Prezime</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div id="div_txt_naziv">
+                                        <label for="txt_naziv">Naziv</label>
+                                        <span>@Model.VM.Naziv</span>
+                                    </div>
+                                    <div id="div_txt_pib">
+                                        <label for="txt_pib">PIB</label>
+                                        <span>@Model.VM.PIB</span>
+
+                                    </div>
+                                }
+
+                                <label for="txt_telefon">Telefon</label>
+                                <span>@Model.VM.Telefon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    @if (Model.VM.Nacin_Isporuke == 2)
+                    {
+                        <div id="div_kontakt_podaci">
+                            <div class="cart__note field">
+                                <label>Kontakt podaci - Adresa</label>
+                                <hr />
+                                <div style="padding-left:20px;">
+                                    <label for="txt_adresa">Ulica (broj/sprat)</label>
+                                    <span>@Model.VM.Adresa</span><br />
+                                    <label for="txt_grad">Grad</label>
+                                    <span>@Model.VM.Grad </span><br />
+                                    <label for="txt_pb">Postanski broj</label>
+                                    <span>@Model.VM.PostanskiBroj</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+                <br />
+                <br />
+                <div class="step__footer" data-step-footer="">
+                    <a class="step__footer__previous-link" asp-page="/Cart/Shipping">
+                        <svg focusable="false" style="height: 10px;" aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon" role="img"
+                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+                            <path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path>
+                        </svg>
+                        <span class="step__footer__previous-link-content">Vatite se korak nazad</span>
+                    </a>
+
+
+                </div>
+                <br />
+                <br />
+                <div class="step__footer" data-step-footer="">
+
+                    <button type="submit" id="checkout" class="cart__checkout-button button btn" name="checkout">
+                        Potvrdi
+                    </button>
+
+                </div>
+
+
+
+                <input type="hidden" name="checkout[client_details][browser_width]" value="1920"><input type="hidden" name="checkout[client_details][browser_height]" value="969"><input type="hidden" name="checkout[client_details][javascript_enabled]" value="1"><input type="hidden" name="checkout[client_details][color_depth]" value="24"><input type="hidden" name="checkout[client_details][java_enabled]" value="false"><input type="hidden" name="checkout[client_details][browser_tz]" value="-120">
+            </form>
+        </div>
+        <aside class="sidebar col-sm-6" role="complementary">
+
+            <div class="sidebar__content">
+                <div id="order-summary" class="order-summary order-summary--is-collapsed" data-order-summary="">
+                    <h3 class="visually-hidden-if-js">Narudzbenica</h3>
+
+                    <div class="order-summary__sections">
+                        <div class="order-summary__section order-summary__section--product-list">
+                            <div class="order-summary__section__content">
+                                <table class="product-table">
+                                    <caption class="visually-hidden">Shopping cart</caption>
+                                    <thead class="product-table__header">
+                                        <tr>
+                                            <th scope="col"><span class="visually-hidden">Product image</span></th>
+                                            <th scope="col"><span class="visually-hidden">Description</span></th>
+                                            <th scope="col"><span class="visually-hidden">Quantity</span></th>
+                                            <th scope="col"><span class="visually-hidden">Price</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-order-summary-section="line-items">
+                                        @if (Model.VM.Cart.items.Count > 0)
+                                        {
+                                            foreach (var item in Model.VM.Cart.items)
+                                            {
+                                                <tr class="product">
+                                                    <td class="product__image">
+                                                        <div class="product-thumbnail ">
+                                                            <div class="product-thumbnail__wrapper">
+                                                                <img alt="@item.product_title" class="product-thumbnail__image" src="@item.image">
+                                                            </div>
+                                                            <span class="product-thumbnail__quantity" aria-hidden="true">@item.quantity</span>
+                                                        </div>
+
+                                                    </td>
+                                                    <th class="product__description" scope="row">
+                                                        <span class="product__description__name order-summary__emphasis">@item.product_title</span><br />
+                                                        <span class="product__description__variant order-summary__small-text">@item.product_color / @item.product_size</span>
+
+                                                    </th>
+                                                    <td class="product__quantity">
+                                                        <span class="visually-hidden">
+                                                            3
+                                                        </span>
+                                                    </td>
+                                                    <td class="product__price">
+                                                        <span class="order-summary__emphasis skeleton-while-loading">@(item.final_price) RSD.</span>
+                                                    </td>
+                                                </tr>
+                                            }
+
+
+                                        }
+                                    </tbody>
+                                </table>
+
+                                @*  <div class="order-summary__scroll-indicator" aria-hidden="true" tabindex="-1" id="order-summary__scroll-indicator">
+                                Scroll for more items
+                                <svg aria-hidden="true" focusable="false" class="icon-svg icon-svg--size-12"> <use xlink:href="#down-arrow"></use> </svg>
+                                </div>*@
+                            </div>
+                        </div>
+
+
+
+                        <div class="order-summary__section order-summary__section--total-lines" data-order-summary-section="payment-lines">
+                            <table class="total-line-table">
+                                <caption class="visually-hidden"></caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><span class="visually-hidden"></span></th>
+                                        <th scope="col"><span class="visually-hidden"></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="total-line-table__tbody">
+                                    <tr class="total-line total-line--subtotal">
+                                        <th class="total-line__name" scope="row">Iznos</th>
+                                        <td class="total-line__price">
+                                            <span class="order-summary__emphasis skeleton-while-loading" data-checkout-subtotal-price-target="@Model.VM.Cart.total_price">@String.Format("{0:N}",Model.VM.Cart.total_price) RSD.</span>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr class="total-line total-line--shipping">
+                                        <th class="total-line__name" scope="row">
+                                            <span>Isporuka</span>
+
+                                        </th>
+                                        <td class="total-line__price">
+                                            <span id="span_shipping" class="skeleton-while-loading order-summary__emphasis">@String.Format("{0:N}",Model.VM.Isporuka) RSD.</span>
+                                        </td>
+                                    </tr>
+
+
+
+                                    @*   <tr class="total-line total-line--taxes hidden" data-checkout-taxes="">
+                                    <th class="total-line__name" scope="row">
+                                    Estimated taxes
+                                    <span class="has-tooltip" style="position:relative">
+                                    <svg class="icon-svg icon-svg--color-adaptive-lighter icon-svg--size-14 tooltip--vertical-align" aria-hidden="true" focusable="false"> <use xlink:href="#question"></use> </svg>
+                                    <span class="tooltip tooltip--right-align">The final tax and total will be confirmed by email or text after you place your order.</span>
+                                    </span>
+                                    </th>
+                                    <td class="total-line__price">
+                                    <span class="order-summary__emphasis skeleton-while-loading" data-checkout-total-taxes-target="0">$0.00</span>
+                                    </td>
+                                    </tr>*@
+
+
+
+
+                                </tbody>
+                                <tfoot class="total-line-table__footer">
+                                    <tr class="total-line">
+                                        <th class="total-line__name payment-due-label" scope="row">
+                                            <span class="payment-due-label__total">Ukupno za plaćanje</span>
+                                        </th>
+                                        <td class="total-line__price payment-due" data-presentment-currency="RSD">
+                                          @*  <span class="payment-due__currency remove-while-loading">RSD</span>*@
+                                            <span id="span_ukupno_placanje" class="payment-due__price skeleton-while-loading--lg" data-checkout-payment-due-target="@Model.VM.Ukupno">@String.Format("{0:N}",Model.VM.Ukupno) RSD.</span>
+                                        </td>
+                                    </tr>
+
+                                </tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+                @*   <div class="visually-hidden" data-order-summary-section="accessibility-live-region">
+                <div aria-live="polite" aria-atomic="true" role="status">
+                Updated total price:
+                <span data-checkout-payment-due-target="747836">$7,478.36</span>
+                </div>
+                </div>*@
+
+
+                <div id="partial-icon-symbols" class="icon-symbols" data-tg-refresh="partial-icon-symbols" data-tg-refresh-always="true">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <symbol id="spinner-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0v2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8h2z"></path></svg></symbol>
+                        <symbol id="chevron-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path></svg></symbol>
+                        <symbol id="down-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path d="M10.817 7.624l-4.375 4.2c-.245.235-.64.235-.884 0l-4.375-4.2c-.244-.234-.244-.614 0-.848.245-.235.64-.235.884 0L5.375 9.95V.6c0-.332.28-.6.625-.6s.625.268.625.6v9.35l3.308-3.174c.122-.117.282-.176.442-.176.16 0 .32.06.442.176.244.234.244.614 0 .848"></path></svg></symbol>
+                        <symbol id="question"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm.7 13H6.8v-2h1.9v2zm2.6-7.1c0 1.8-1.3 2.6-2.8 2.8l-.1 1.1H7.3L7 7.5l.1-.1c1.8-.1 2.6-.6 2.6-1.6 0-.8-.6-1.3-1.6-1.3-.9 0-1.6.4-2.3 1.1L4.7 4.5c.8-.9 1.9-1.6 3.4-1.6 1.9.1 3.2 1.2 3.2 3z"></path></svg></symbol>
+                    </svg>
+                </div>
+
+
+            </div>
+        </aside>
+
+
+
+
+    </div>
+
+</div>
+@section Scripts{
+    <script>
+        $("#rb_licno").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#div_kontakt_podaci").hide();
+                $("#div_osnovni_podaci").show();
+            } else {
+                $("#div_kontakt_podaci").show();
+                $("#div_osnovni_podaci").show();
+            }
+        });
+        $("#rb_dostava").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#div_kontakt_podaci").show();
+                $("#div_osnovni_podaci").show();
+            }
+        });
+        $("#rb_fizicko").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#div_txt_ime").show();
+                $("#div_txt_prezime").show();
+                $("#div_txt_naziv").hide();
+                $("#div_txt_pib").hide();
+            }
+        });
+        $("#rb_pravno").on("change", function () {
+            if ($(this).is(":checked")) {
+                $("#div_txt_ime").hide();
+                $("#div_txt_prezime").hide();
+                $("#div_txt_naziv").show();
+                $("#div_txt_pib").show();
+            }
+        });
+    </script>
+}

@@ -1,0 +1,1335 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Početna";
+}
+<style>
+    #slide--1580215063672-0 .slider-button > a {
+        background-color: #313c46;
+        color: #ffffff
+    }
+
+    #slide--1580215063672-0 .slider-button {
+        border-color: #313c46;
+    }
+
+        #slide--1580215063672-0 .slider-button:hover, #slide--1580215063672-0 .slider-button:focus, #slide--1580215063672-0 .slider-button:active {
+            border-color: #f04706;
+        }
+
+        #slide--1580215063672-0 .slider-button > a::after {
+            background-color: #f04706;
+        }
+
+        #slide--1580215063672-0 .slider-button > a:hover, #slide--1580215063672-0 .slider-button > a:focus, #slide--1580215063672-0 .slider-button > a:active {
+            color: #ffffff
+        }
+
+    #slide--1580215063672-1 .slider-button > a {
+        background-color: #2b4861;
+        color: #ffffff
+    }
+
+    #slide--1580215063672-1 .slider-button {
+        border-color: #2b4861;
+    }
+
+        #slide--1580215063672-1 .slider-button:hover, #slide--1580215063672-1 .slider-button:focus, #slide--1580215063672-1 .slider-button:active {
+            border-color: #f04706;
+        }
+
+        #slide--1580215063672-1 .slider-button > a::after {
+            background-color: #f04706;
+        }
+
+        #slide--1580215063672-1 .slider-button > a:hover, #slide--1580215063672-1 .slider-button > a:focus, #slide--1580215063672-1 .slider-button > a:active {
+            color: #ffffff
+        }
+
+    #slide--1580215063672-0 .slider-button > a {
+        background-color: #313c46;
+        color: #ffffff
+    }
+
+    #slide--1580215063672-0 .slider-button {
+        border-color: #313c46;
+    }
+
+        #slide--1580215063672-0 .slider-button:hover, #slide--1580215063672-0 .slider-button:focus, #slide--1580215063672-0 .slider-button:active {
+            border-color: #f04706;
+        }
+
+        #slide--1580215063672-0 .slider-button > a::after {
+            background-color: #f04706;
+        }
+
+        #slide--1580215063672-0 .slider-button > a:hover, #slide--1580215063672-0 .slider-button > a:focus, #slide--1580215063672-0 .slider-button > a:active {
+            color: #ffffff
+        }
+
+    #slide--1580215063672-1 .slider-button > a {
+        background-color: #2b4861;
+        color: #ffffff
+    }
+
+    #slide--1580215063672-1 .slider-button {
+        border-color: #2b4861;
+    }
+
+        #slide--1580215063672-1 .slider-button:hover, #slide--1580215063672-1 .slider-button:focus, #slide--1580215063672-1 .slider-button:active {
+            border-color: #f04706;
+        }
+
+        #slide--1580215063672-1 .slider-button > a::after {
+            background-color: #f04706;
+        }
+
+        #slide--1580215063672-1 .slider-button > a:hover, #slide--1580215063672-1 .slider-button > a:focus, #slide--1580215063672-1 .slider-button > a:active {
+            color: #ffffff
+        }
+</style>
+<div class="template-index">
+    <div class="pagecontent main-content">
+     
+
+        <div id="shopify-section-template--15813930975461__slideshow" class="shopify-section index-section tt-homeslider " style="margin-bottom: 0px;">
+            <div class="home-slider">
+                <div class="homeslider type_slide" id="homeslider--template--15813930975461__slideshow" data-section-id="template--15813930975461__slideshow" data-section-type="slideshow-section" data-animation-type="slide">
+                    <ul class="slides">
+                         @* Slider1*@
+                        <li id="slide-1" class="slide">
+
+
+                            <a href="#" tabindex="0"><img src="img/slider-viva-04.png" alt="slider-image"></a>
+
+
+
+
+
+                            <div class="slider-content-wrap content-right effect_right">
+                                <div class="slider-desc" style="color:#ffffff">VELIKI IZBOR</div>
+                                <div class="slider-subtitle" style="color:#ffffff">Zaštitnih rukavica</div>
+                                <div class="slider-title" style="color:#313c46"></div>
+                                @* <div class="slider-pricedesc" style="color:#313c46">OD <span class="price">150.00 rsd/-</span></div>*@
+
+                                <div class="slider-button">
+                                    <a asp-page="/Shop/Index" asp-route-Group_Id="620" asp-route-Sub_Group_Id="0" class="btn" tabindex="0">Pogledaj</a>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </li>
+                        @* Slider2*@
+                        <li id="slide--1580215063672-1" class="slide" data-thumb="slide1-thumb.jpg" aria-hidden="true">
+
+
+                            <a href="#" tabindex="-1"><img src="img/slider-viva-05.jpg" alt="slider-image"></a>
+
+                            <div class="slider-content-wrap content-right effect_right">
+                                @*    <div class="slider-desc" style="color:#ffffff">VELIK AKCIJA</div>*@
+                                <div class="slider-subtitle" style="color:#ffffff">Zaštitna obuća</div>
+                                @*<div class="slider-title" style="color:#bbc1c7">Brenda YOYOYO</div>
+                                <div class="slider-pricedesc" style="color:#bbc1c7">OD <span class="price">150.00 rsd/-</span></div>*@
+
+                                <div class="slider-button">
+                                    <a asp-page="/Shop/Index" asp-route-Group_Id="626" asp-route-Sub_Group_Id="0" class="btn" tabindex="0">Pogledaj</a>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </li>
+                        @* Slider3*@
+                                 <li id="slide-3" class="slide" aria-hidden="true">
+
+
+                            <a href="#" tabindex="-1"><img src="img/Slider-3.jpg" alt="slider-image"></a>
+
+                            <div class="slider-content-wrap content-right effect_right">
+                                @*    <div class="slider-desc" style="color:#ffffff">VELIK AKCIJA</div>*@
+                                <div class="slider-subtitle" style="color:#ffffff">Zaštita glave</div>
+                                @*<div class="slider-title" style="color:#bbc1c7">Brenda YOYOYO</div>
+                                <div class="slider-pricedesc" style="color:#bbc1c7">OD <span class="price">150.00 rsd/-</span></div>*@
+
+                                <div class="slider-button">
+                                    <a asp-page="/Shop/Index" asp-route-Group_Id="625" asp-route-Sub_Group_Id="0" class="btn" tabindex="0">Pogledaj</a>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </li>
+                          @* Slider4*@
+                                 <li id="slide-4" class="slide" aria-hidden="true">
+
+
+                            <a href="#" tabindex="-1"><img src="img/Slider-4.jpg" alt="slider-image"></a>
+
+                            <div class="slider-content-wrap content-right effect_right">
+                                @*    <div class="slider-desc" style="color:#ffffff">VELIK AKCIJA</div>*@
+                                <div class="slider-subtitle" style="color:ActiveBorder">Zaštita očiju</div>
+                                @*<div class="slider-title" style="color:#bbc1c7">Brenda YOYOYO</div>
+                                <div class="slider-pricedesc" style="color:#bbc1c7">OD <span class="price">150.00 rsd/-</span></div>*@
+
+                                <div class="slider-button">
+                                    <a asp-page="/Shop/Index" asp-route-Group_Id="624" asp-route-Sub_Group_Id="0" class="btn" tabindex="0">Pogledaj</a>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </li>
+                       @* Slider5*@
+                        <li id="slide-5" class="slide" aria-hidden="true">
+
+
+                            <a href="#" tabindex="-1"><img src="img/Slider-5.jpg" alt="slider-image"></a>
+
+                            <div class="slider-content-wrap content-right effect_right">
+                                @*    <div class="slider-desc" style="color:#ffffff">VELIK AKCIJA</div>*@
+                                <div class="slider-subtitle" style="color:ActiveBorder">Zaštita disajnih organa</div>
+                                @*<div class="slider-title" style="color:#bbc1c7">Brenda YOYOYO</div>
+                                <div class="slider-pricedesc" style="color:#bbc1c7">OD <span class="price">150.00 rsd/-</span></div>*@
+
+                                <div class="slider-button">
+                                    <a asp-page="/Shop/Index" asp-route-Group_Id="622" asp-route-Sub_Group_Id="0" class="btn" tabindex="0">Pogledaj</a>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="shopify-section-template--15813930975461__cms-services" class="shopify-section index-section ttservices">
+            <style>
+                #ttcmsservices {
+                    background: rgba(0,0,0,0);
+                }
+
+                    #ttcmsservices .ttcontent .service-title {
+                        color: #222222;
+                    }
+
+                    #ttcmsservices .ttcontent:hover .content .service-title {
+                        color: #f04706;
+                    }
+
+                    #ttcmsservices .ttcontent .service-desc {
+                        color: #666666;
+                    }
+            </style>
+
+
+            <style>
+                .service-offer .offer-img {
+                    background:;
+                }
+
+                .service-offer .title {
+                    color:;
+                }
+            </style>
+            <div class="section-bg">
+                <div id="ttcmsservices" class="ttservice">
+                    <div class="container">
+                        <div class="block_content owl-carousel" style="display: block;">
+                            <div class="ttcontent">
+                                <div class="service">
+                                    <div id="icon-a45cb13b-35f3-48e6-8d70-0d964ca95475" class="ttshipping_img service-icon">
+                                        <img loading="lazy" src="~/img/percente.png" alt="service img" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="service-title">Popust za pravna lica</div>
+                                        <div class="service-desc">Kontaktirajte nas radi ostvarivanja popusta</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="ttcontent">
+                                <div class="service">
+                                    <div id="icon-1614071790f5f451ac-2" class="ttshipping_img service-icon">
+                                        <img loading="lazy" src="img/Clock.png" alt="service img" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="service-title">Radno vreme</div>
+                                        <div class="service-desc">Pozovite nas od 08h do 16h</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="ttcontent">
+                                <div class="service">
+                                    <div id="icon-1614071790f5f451ac-0" class="ttshipping_img service-icon">
+                                        <img loading="lazy" src="~/img/truck.jpg" alt="service img" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="service-title">Troškovi isporuke</div>
+                                        <div class="service-desc">Besplatni za narudžbine preko 8.000,00 rsd.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="shopify-section-template--15813930975461__1647407950a281eb2f" class="shopify-section category-featured index-section">
+                    <div data-section-id="template--15813930975461__1647407950a281eb2f" data-section-type="tt-category-feature-wrap" class="tt-category-feature-wrap">
+                        <div class="container">
+                            <div class="category_feature_wrap">
+
+                                <div class="category_cms_feature_wrap">
+
+                                    <div class="category_cms_feature owl-carousel owl-theme" data-col="5">
+                                        <div id="cat-featured-1647407950b0e646fc-0" class="collection_cat_item col-xs-12">
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="620" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITA RUKU</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="~/img/rukavice.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="621" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITA OD PADA</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="~/img/karabiner.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="622" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITA DISAJNIH ORGANA</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="~/img/maska.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="cat-featured-8f151242-1e50-46b9-b80f-dcd5da933027" class="collection_cat_item col-xs-12">                                         
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="623" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITA SLUHA</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="~/img/slusalice.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                          
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="624" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITA OČIJU</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="~/img/maska_oci.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="625" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITA GLAVE</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+
+                                                    <div class="cat-cms-img">
+
+
+                                                        <img loading="lazy" src="~/img/slem.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="cat-featured-eb10cdc4-d731-48a3-9e0b-5c26df4e0e2d" class="collection_cat_item col-xs-12">
+
+
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="626" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITNA I RADNA OBUĆA</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="~/img/cizma.png" style="height:200px" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="627" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">ZAŠTITNA I RADNA ODEĆA</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="img/pantalone.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a asp-page="/Shop/Index" asp-route-Group_Id="628" asp-route-Sub_Group_Id="0">
+                                                <div class="tt-collection-content col-sm-7 col-xs-7">
+                                                    <div class="collection_title">OSTALO</div>
+
+                                                    <p class="desc"> </p>
+
+                                                </div>
+                                                <div class="collection_img col-sm-5 col-xs-5">
+                                                    <div class="cat-cms-img">
+                                                        <img loading="lazy" src="img/3dots.png" alt="category featured" />
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    @*    <div id="cat-featured-888477e2-c88f-46c7-8e8e-5aa26b7bd478" class="collection_cat_item col-xs-12">
+                                           
+                                       
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-product">
+                    <div class="container">
+                        <div id="shopify-section-template--15813930975461__1650258784d34e02af" style="width:100%" class="shopify-section index-section ttproduct col-sm-12 col-xs-12">
+@*                            <div data-section-id="template--15813930975461__1650258784d34e02af" data-section-type="product-tab-type-1" class="product-tab-type-1 tab-model-wrap has_bg ">
+                                <div class="grid__item">
+                                    <ul id="tab_product_template--15813930975461__1650258784d34e02af" class="nav nav-tabs">
+
+                                        <li class="active"><a href="#tab-2" data-toggle="tab" aria-expanded="false" class="tab-btn">Novo </a></li>
+                                        <li class=""><a href="#tab-1" data-toggle="tab" aria-expanded="false" class="tab-btn">Akcija</a></li>
+                                        <li class=""><a href="#tab-3" data-toggle="tab" aria-expanded="false" class="tab-btn">Najprodavaniji </a></li>
+                                    </ul>
+
+
+                                    <div class="TTProduct-Tab">
+                                        <div class="tab-inner tab-content tab-container two_rows">
+
+
+                                            <div id="tab-1" data-col="tab-1" class="contents tab-pane  product_col5 ">
+                                                <div class="new-products-1650258784467d1b9d-0 new-products-wrap owl-carousel owl-theme owl-loaded owl-drag">
+
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            @* <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                           
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div id="product-7685109350629" data-id="product-7685109350629" data-col="7685109350629" class="item-row style3 product-7685109350629 product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                            <div class="product-wrapper product_container imgloaded">
+                                                                <div class="thumbs product-thumb">
+
+                                                                    <div class="product-image col-xs-12 padding_0">
+                                                                        <a class="grid-view-item__link grid-view-item__links" href="/Product?id=897&amp;model=true">
+                                                                            <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="https://apiv2.promosolution.services/content/ModelItem/50010_000.jpg?v=220517102353                                                                                                                                                                                                                         " alt="Ženska pamucna polo majica, 180 g/m2">
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="btn_wrapper">
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="product-description col-xs-12">
+
+
+                                                                    <div class="grid-view-item__vendor grid-item-meta">
+                                                                        <a title="EXPLODE                                                                                             " href="/Shop?Group_Id=0&amp;Brand=EXPLODE">EXPLODE                                                                                              </a>
+
+                                                                    </div>
+                                                                    <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" href="/Product?id=897&amp;model=true">Ženska pamucna polo majica, 180 g/m2</a><div class="spr-badges grid-item-meta">
+                                                                    </div>
+
+
+
+                                                                    <div class="grid-view-item__meta">
+
+
+
+                                                                        <div class="sale-price">
+                                                                            <span class="product-price__price product-price__sale"><span class="money">1080 RSD</span></span>
+                                                                            <br>
+                                                                            <span class="money">(8.550,00 RSD bez PDV)</span>
+                                                                        </div>
+
+                                                                    </div><div class="cart-qty">
+
+                                                                        <div class="pro_btn btn1 add_tocart">
+                                                                            <form action="/cart/add" method="post" class="variants clearfix cart-form-7685109350629">
+                                                                                <input type="hidden" name="id" value="42655692325093">
+                                                                                <a class="add-cart-btn btn" title="ADD TO CART">
+                                                                                    <svg class="cached" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                                        <polyline points="23 4 23 10 17 10"></polyline>
+                                                                                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                                                                    </svg>
+                                                                                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                                                    <span class="add_cart tooltip-label">DODAJ U KORPU</span>
+                                                                                </a>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div id="tab-2" data-col="tab-2" class="contents tab-pane fade product_col5 in active">
+                                                <div class="new-products-1650258784467d1b9d-0 top-featured-wrap owl-carousel owl-theme owl-loaded owl-drag">
+                                                    @foreach (var item in Model.Artikli_Novi)
+                                                    {
+                                                        <div class="item">
+                                                            <div id="product-novo" data-id="product-novo" data-col="@item.Id" class="item-row style3 product-novo product-layouts col-xs-12 grid-view-item" data-ajax-enabled="true">
+                                                                <div class="product-wrapper product_container imgloaded">
+                                                                    <div class="thumbs product-thumb">
+
+                                                                        <div class="product-image col-xs-12 padding_0">
+                                                                            <a class="grid-view-item__link grid-view-item__links" asp-page="/product/index" asp-route-id="@item.Id" asp-route-model="true">
+                                                                                <img loading="lazy" class="grid-view-item__image featured-image image_thumb" src="@item.Slika" alt="@item.Description">
+                                                                            </a>
+
+
+                                                                        </div>
+
+                                                                        <div class="btn_wrapper">
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="product-description col-xs-12">
+
+                                                                        <div class="short-title" style="width:100%">
+
+                                                                            <div class="grid-view-item__vendor grid-item-meta">
+                                                                                @if (!String.IsNullOrEmpty(@item.Brand))
+                                                                                {
+                                                                                    <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Brand="@item.Brand.Trim()" title="@item.Brand">@item.Brand </a>
+                                                                                }
+
+                                                                            </div>
+                                                                            <a class="grid-view-item__link grid-link__title h4 grid-view-item__title grid-item-meta" asp-page="/product/index" asp-route-id="@item.Id" asp-route-model="true">@item.Description</a><div class="spr-badges grid-item-meta">
+                                                                            </div>
+
+                                                                        </div>
+
+
+                                                                        <div class="grid-view-item__meta">
+
+
+
+                                                                            <div class="sale-price">
+                                                                                <span class="product-price__price product-price__sale"><span class="money">@item.FinalnaCena RSD</span></span>
+                                                                                <br>
+                                                                                <span class="money">(@Math.Round(item.FinalnaCenaPdv.Value, 2) RSD bez PDV)</span>
+                                                                            </div>
+
+                                                                        </div>
+                                                  
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                </div>
+                                            </div>
+
+                                            <div id="tab-3" data-col="tab-3" class="contents tab-pane  product_col5">
+                                                <div class="new-products-1650258784467d1b9d-0 top-featured-wrap owl-carousel owl-theme owl-loaded owl-drag">
+                                                    <div class="item"><h4>1</h4></div>
+                                                    <div class="item"><h4>2</h4></div>
+                                                    <div class="item"><h4>3</h4></div>
+                                                    <div class="item"><h4>4</h4></div>
+                                                    <div class="item"><h4>5</h4></div>
+                                                    <div class="item"><h4>6</h4></div>
+                                                    <div class="item"><h4>7</h4></div>
+                                                    <div class="item"><h4>8</h4></div>
+                                                    <div class="item"><h4>9</h4></div>
+                                                    <div class="item"><h4>10</h4></div>
+                                                </div>
+                                            </div>
+
+                                        </div><!--End tabs-->
+                                    </div>
+
+                                </div>
+                            </div>
+*@                            <style>
+                                .ttproduct .nav.nav-tabs > li > a {
+                                    color: #666666;
+                                }
+
+                                    .ttproduct .nav.nav-tabs > li.active > a,
+                                    .ttproduct .nav.nav-tabs > li > a:focus {
+                                        color: #2b4861;
+                                    }
+
+                                .ttproduct .nav-tabs > li > a:hover {
+                                    color: #2b4861;
+                                }
+
+                                .ttproduct .section-header .subtitle {
+                                    color:;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="shopify-section-template--15813930975461__our_brand" class="shopify-section index-section brand-logo">
+                <div class="container">
+
+                    <div class="brands_slider_wrap" data-section-id="template--15813930975461__our_brand" style="background:#ffffff">
+                        <div id="brands_list_slider" class="tt-brand_slider">
+                            <div class="brand-bar__item" style="text-align:center">
+
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="3M" title="3M">
+
+
+                                    <img loading="lazy" style="max-height:50px" src="~/img/brand logo/3m.png" alt="brand-logo" class="brand-bar__image" />
+
+
+                                </a>
+
+                            </div>
+
+                            <div class="brand-bar__item" style="text-align:center">
+
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="Explode" title="Explode">
+                                    <img loading="lazy" style="max-height:50px" src="https://apiv2.promosolution.services/content/Podešavanja/Brend/explode-logo.png?v=230112133205" alt="brand-logo" class="brand-bar__image" />
+                                </a>
+
+                            </div>
+
+                            
+
+                            <div class="brand-bar__item">
+
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="ATG" title="ATG">
+
+
+                                    <img loading="lazy" style="max-height:50px"  src="~/img/brand logo/atg.png" alt="brand-logo" class="brand-bar__image" />
+
+
+                                </a>
+
+                            </div>
+
+                            <div class="brand-bar__item">
+
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="JSP" title="JSP">
+
+
+                                    <img loading="lazy" style="max-height:50px" src="~/img/brand logo/jsp.png" alt="brand-logo" class="brand-bar__image" />
+
+
+                                </a>
+
+                            </div>
+                            <div class="brand-bar__item">
+
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="PROTEKT" title="PROTEKT">
+
+
+                                    <img loading="lazy" style="max-height:50px" src="~/img/brand logo/Protekt.jpg" alt="brand-logo" class="brand-bar__image" />
+
+
+                                </a>
+
+                            </div>
+                            <div class="brand-bar__item">
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="TEKTON PRO" title="TEKTON PRO">
+
+                                    <img loading="lazy" src="https://apiv2.promosolution.services/Content/Images/Brand/dfd33808-f03d-44ac-b58b-04daade519c4.png" alt="brand-logo" class="brand-bar__image" />
+
+
+                                </a>
+
+                            </div>
+
+                            <div class="brand-bar__item">
+
+                                <a asp-page="/Shop/Index" asp-route-Group_Id="0" asp-route-Sub_Group_Id="0" asp-route-Brand="TOWORKFOR" title="TOWORKFOR">
+
+
+                                    <img loading="lazy" src="https://apiv2.promosolution.services/content/Podešavanja/Brend/TWF.png?v=221206095222" alt="brand-logo" class="brand-bar__image" />
+
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            if ($("body")) {
+                var tab_carousel_1 = $("body .new-products-1650258784467d1b9d-0");
+                $(tab_carousel_1).owlCarousel({
+
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        100: { items: 1 },
+                        319: { items: 2 },
+                        751: { items: 3 },
+                        992: { items: 3 },
+                        1300: { items: 4 },
+                        1500: { items: 5 },
+                        1600: { items: 5 }
+                    },
+                    nav: !0, dots: !1
+                })
+            }
+            else {
+                var tab_carousel = $("body:not .new-products-1650258784467d1b9d-0");
+                $(tab_carousel).owlCarousel({
+
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        100: { items: 1 },
+                        319: { items: 2 },
+                        751: { items: 3 },
+                        992: { items: 3 },
+                        1300: { items: 4 },
+                        1500: { items: 5 },
+                        1600: { items: 5 }
+                    },
+                    nav: !0, dots: !1
+                })
+            };
+            $(".new-products-nav .next").click(function () {
+                $(".new-products-1650258784467d1b9d-0").trigger('next.owl')
+            });
+
+            $(".new-products-nav .prev").click(function () {
+                $(".new-products-1650258784467d1b9d-0").trigger('prev.owl')
+            })
+        });
+
+        $(window).load(function () {
+            if ($(".new-products-wrap").find('.owl-nav').hasClass('disabled')) {
+                $(".new-products-nav").hide()
+            }
+            else { $(".new-products-nav").show() }
+        });
+        $(window).resize(function () {
+            if (
+                $(".new-products-wrap").find('.owl-nav').hasClass('disabled')) { $(".new-products-nav").hide() } else { $(".new-products-nav").show() }
+        })
+    </script>
+
+}

@@ -1,0 +1,244 @@
+﻿@model SyncViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    /*
+             CSS for the main interaction
+            */
+    .tabset > input[type="radio"] {
+        position: absolute;
+        left: -200vw;
+    }
+
+    .tabset .tab-panel {
+        display: none;
+    }
+
+    .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+    .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+    .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+    .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+    .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+    .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+        display: block;
+    }
+
+    /*
+             Styling
+            */
+    body {
+        font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+        color: #333;
+        font-weight: 300;
+    }
+
+    .tabset > label {
+        position: relative;
+        display: inline-block;
+        padding: 15px 15px 25px;
+        border: 1px solid transparent;
+        border-bottom: 0;
+        cursor: pointer;
+        font-weight: 600;
+        margin-bottom: -0.5rem;
+    }
+
+        .tabset > label::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+            width: 22px;
+            height: 4px;
+            background: #8d8d8d;
+        }
+
+        .tabset > label:hover,
+        .tabset > input:focus + label {
+            color: #06c;
+        }
+
+            .tabset > label:hover::after,
+            .tabset > input:focus + label::after,
+            .tabset > input:checked + label::after {
+                background: #06c;
+            }
+
+    .tabset > input:checked + label {
+        border-color: #ccc;
+        border-bottom: 1px solid #fff;
+        margin-bottom: -1px;
+    }
+
+    .tab-panel {
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+
+</style>
+<h1>Sinhronizacija sa Servisima</h1>
+<div class="tabset">
+    <!-- Tab 1 -->
+    <input type="radio" name="tabset" id="tab1" aria-controls="promosolution" checked>
+    <label for="tab1">PROMOSOLUTION</label>
+    <!-- Tab 2 -->
+    <input type="radio" name="tabset" id="tab2" aria-controls="lacuna">
+    <label for="tab2">LACUNA</label>
+    <!-- Tab 3 -->
+    @*<input type="radio" name="tabset" id="tab3" aria-controls="cenovnik">
+    <label for="tab2">Cenovnik</label>*@
+    <div class="tab-panels">
+        <section id="promosolution" class="tab-panel">
+            <h3>Sinhronizacija svih artikala</h3>
+            <p>Ovom opcijom se sinhronizuju svi artikli iz PROMOSOLUTION baze. Ova opcija zahteva vreme da se obrade svi artikli.</p>
+
+
+            @Html.HiddenFor(model=>model.Sve)
+            <button id="btnSyncAll_promosolution">Sinhronizuj</button>
+            <hr />
+         @*   <h3>Sinhronizacija određenog artikla</h3>
+            <p>Ovom opcijom se sinhronizuje samo artikal sa unetom šifrom.</p>
+            <label>Sifra: </label>
+            @Html.EditorFor(model=>model.Sifra)
+            <br />
+            <br />
+            <button id="btnSyncSingle" type="button">Sinhronizuj</button>*@
+        </section>
+        <section id="lacuna" class="tab-panel">
+
+            @*<h3>Sinhronizacija stanja</h3>
+            <button id="btnSyncStanje" type="button">Sinhronizuj stanje</button>*@
+            <h3>Sinhronizacija svih artikala</h3>
+            <p>Ovom opcijom se sinhronizuju svi artikli iz LACUNA baze. Ova opcija zahteva vreme da se obrade svi artikli.</p>
+
+
+            @Html.HiddenFor(model=>model.Sve)
+            <button id="btnSyncAll_lacuna">Sinhronizuj</button>
+            <hr />
+        </section>
+     @*   <section id="cenovnik" class="tab-panel">
+
+            <h3>Sinhronizacija cenovnika</h3>
+
+
+            <button type="submit">Sinhronizuj</button>
+
+        </section>*@
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="modal_sync" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Sinhronizacija u toku!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <p>Sinhronizacija artikala je u toku. Ne gasite ovaj ekran. Ekran ce se sam ugasiti pri zavrsetku sinhrozacije. </p>
+
+                    </div>
+                </div>
+            </div>
+            @*  <div class="modal-footer">
+            <a class="btn btn-secondary" data-dismiss="modal">Nastavi</a>
+
+            </div>*@
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+        $("#btnSyncAll_promosolution").on("click", function (e) {
+            $("#modal_sync").modal("show");
+            $("#Sve").val(true);
+            $("#Sifra").val("");
+
+            $.ajax({
+                type: "GET",
+                async: true,
+                contentType: "application/json; charset=utf-8",
+                url: "/Sync/SyncArtikala_Promosolution",
+                data: { "sifra": "" },
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                    $("#modal_sync").modal("hide");
+
+                }
+            });
+            //$("#mainForm").submit();
+        });
+        $("#btnSyncAll_lacuna").on("click", function (e) {
+            $("#modal_sync").modal("show");
+            $("#Sve").val(true);
+            $("#Sifra").val("");
+
+            $.ajax({
+                type: "GET",
+                async: true,
+                contentType: "application/json; charset=utf-8",
+                url: "/Sync/SyncArtikala_Lacuna",
+                data: { "sifra": "" },
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                    $("#modal_sync").modal("hide");
+
+                }
+            });
+            //$("#mainForm").submit();
+        });
+
+        $("#btnSyncSingle").on("click", function (e) {
+            $("#modal_sync").modal("show");
+            $("#Sve").val(false);
+            $.ajax({
+                type: "GET",
+                async: true,
+                contentType: "application/json; charset=utf-8",
+                url: "/Sync/SyncArtikala",
+                data: { "sifra": $("#Sifra").val() },
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                    $("#modal_sync").modal("hide");
+
+                }
+            });
+        });
+        $("#btnSyncStanje").on("click", function (e) {
+            $("#modal_sync").modal("show");
+            $("#Sve").val(false);
+            $.ajax({
+                type: "GET",
+                async: true,
+                contentType: "application/json; charset=utf-8",
+                url: "/Sync/SyncStanja",
+                data: { "sifra": "" },
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                    $("#modal_sync").modal("hide");
+
+                }
+            });
+
+
+        });
+    </script>
+
+}
+
+

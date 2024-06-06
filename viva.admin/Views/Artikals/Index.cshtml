@@ -1,0 +1,328 @@
+﻿@model viva.admin.Models.Artikli.ArtikalListViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista Modela</h1>
+<hr />
+<div>
+
+
+    <form asp-action="Index" enctype="multipart/form-data" method="post" id="formSearch">
+        <h3>Pretraga:</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group ">
+                    <label for="Keyword">Tekstalna pretraga: (barkod, sifra, naziv) </label>
+                    <input asp-for="Keyword" class="form-control" />
+
+                </div>
+                <div class="form-group ">
+                    <label for="ddlGrupe">Grupe: </label>
+                    <select id="ddlGrupe" class="form-control" name="ddlGrupe" asp-for="Group_Id" asp-items="Model.Grupe">
+                        <option value="-1">--Izaberite--</option>
+                    </select>
+
+                </div>
+                <div class="form-group ">
+                    <label for="ddlBrand">Brand: </label>
+                    <select id="ddlBrand" class="form-control" name="ddlBrand" asp-for="Brand_Id" asp-items="Model.Brendovi">
+                        <option value="-1">--Izaberite--</option>
+                    </select>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <input type="hidden" asp-for="Group_Id" />
+        <input type="hidden" asp-for="Brand_Id" />
+        <input type="hidden" asp-for="SamoArtikli" />
+        <button type="submit" id="btnPretraga" class="btn btn-primary" asp-action="Index">Trazi</button>
+    </form>
+</div>
+<hr />
+@if (Model.SamoArtikli)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <strong>Id_Izvor</strong>
+                </th>
+                <th>
+                    <strong>Barkod</strong>
+                </th>
+                <th>
+                    <strong>Naziv</strong>
+                </th>
+
+                <th>
+                    <strong>Novo</strong>
+                </th>
+                <th>
+                    <strong>Najprodavaniji</strong>
+                </th>
+
+                <th>
+                    <strong>Aktivan</strong>
+                </th>
+                <th>
+                    <strong>Na Stanju</strong>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Artikli != null && Model.Artikli.Count > 0)
+            {
+                foreach (var item in Model.Artikli)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SourceId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Barkod)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Naziv)
+                        </td>
+
+                        <td>
+                            @Html.EditorFor(modelItem => item.Novo,new {
+                htmlAttributes = new { data_id = @item.Id, @class="dd_novo" }
+                })
+                        </td>
+                        <td>
+                            @Html.EditorFor(modelItem => item.Najprodavaniji,new {
+                htmlAttributes = new { data_id = @item.Id , @class="dd_najprodavaniji"}
+                })
+                        </td>
+
+                        <td>
+                            @Html.EditorFor(modelItem => item.Aktivan,new {
+                htmlAttributes = new { data_id = @item.Id, @class="dd_aktivan" }
+                })
+                        </td>
+                        <td>
+                            <strong class="dd_na_stanju">@item.NaStanju</strong>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Opcije
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Detalji</a>
+                                @*    <a class="dropdown-item dropdown-item-client" data-mode="sync" data-id="@item.Id">Sync</a>
+                                    <a class="dropdown-item dropdown-item-client" data-mode="stanje" data-id="@item.Id">Stanje</a>*@
+
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <strong>Id_Izvor</strong>
+                </th>
+              
+                <th>
+                    <strong>Naziv</strong>
+                </th>
+                <th>
+                    <strong>Opis</strong>
+                </th>
+                <th>
+                    <strong>Novo</strong>
+                </th>
+                <th>
+                    <strong>Najprodavaniji</strong>
+                </th>
+
+                <th>
+                    <strong>Aktivan</strong>
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Modeli != null && Model.Modeli.Count > 0)
+            {
+                foreach (var item in Model.Modeli)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SourceId)
+                        </td>
+                      
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Naziv)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.EditorFor(modelItem => item.Novo,new {
+                htmlAttributes = new { data_id = @item.Id, @class="dd_novo" }
+                })
+                        </td>
+                        <td>
+                            @Html.EditorFor(modelItem => item.Najprodavaniji,new {
+                htmlAttributes = new { data_id = @item.Id , @class="dd_najprodavaniji"}
+                })
+                        </td>
+
+                        <td>
+                            @Html.EditorFor(modelItem => item.Aktivan,new {
+                htmlAttributes = new { data_id = @item.Id, @class="dd_aktivan" }
+                })
+                        </td>
+
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Opcije
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" asp-action="Model_Edit" asp-route-id="@item.Id">Detalji</a>
+                                @* <a class="dropdown-item dropdown-item-client" data-mode="sync" data-id="@item.Id">Sync</a>
+                                    <a class="dropdown-item dropdown-item-client" data-mode="stanje" data-id="@item.Id">Stanje</a>*@
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+}
+
+<div class="modal fade" id="modal_sync" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Sinhronizacija u toku!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <p>Sinhronizacija artikala je u toku. Ne gasite ovaj ekran. Ekran ce se sam ugasiti pri zavrsetku sinhrozacije. </p>
+
+                    </div>
+                </div>
+            </div>
+            @*  <div class="modal-footer">
+            <a class="btn btn-secondary" data-dismiss="modal">Nastavi</a>
+
+            </div>*@
+        </div>
+    </div>
+</div>
+@{
+    var prevDisabled = Model.Artikli != null && !Model.Artikli.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = Model.Artikli != null && !Model.Artikli.HasNextPage ? "disabled" : "";
+    string pageIndex = (Model.Artikli != null) ? (Model.Artikli.PageIndex - 1).ToString() : "0";
+}
+@if (Model.Artikli != null && Model.Artikli.Count > 0)
+{
+    <a asp-action="Index"
+   asp-route-SortMode="@Model.SortMode"
+   asp-route-RecordsByPage="@Model.RecordByPage"
+   asp-route-Group_Id="@Model.Group_Id"
+   asp-route-PageNumber="@(Model.Artikli.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn @prevDisabled">Prethodna</a>
+    <a asp-action="Index"
+   asp-route-SortMode="@Model.SortMode"
+   asp-route-Group_Id="@Model.Group_Id"
+   asp-route-RecordsByPage="@Model.RecordByPage"
+   asp-route-PageNumber="@(Model.Artikli.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]" class="btn @nextDisabled">Sledeca</a>
+
+}
+
+@section Scripts{
+    <script>
+
+        $(".dd_aktivan").change(function () {
+            var item = $(this);
+            var id = item.attr("data-id");
+            SaveData("Artikals/PromeniAktivan", item.is(':checked'), id)
+
+        });
+        $(".dd_novo").change(function () {
+            var item = $(this);
+            var id = item.attr("data-id");
+            SaveData("Artikals/PromeniNovo", item.val(), id)
+
+        });
+        $(".dd_najprodavaniji").change(function () {
+            var item = $(this);
+            var id = item.attr("data-id");
+            SaveData("Artikals/PromeniNajprodavaniji", item.val(), id)
+
+        });
+        $("body").on("change", "#ddlGrupe", function () {
+            $("input[name=Group_Id]").val($(this).find("option:selected").val());
+         
+        });
+           $("body").on("change", "#ddlBrand", function () {
+            $("input[name=Brand_Id]").val($(this).find("option:selected").val());
+         
+        });
+        function SaveData(poziv, value, id) {
+            $.ajax({
+                method: "GET",
+                url: poziv,
+                data: { id: id, value: value }
+            })
+                .done(function (msg) {
+
+                });
+        }
+
+        $(document).ready(function () {
+            $(".dropdown-item-client").on("click", function (e) {
+                var id = $(this).attr("data-id");
+                var mode = $(this).attr("data-mode");
+                $("#modal_sync").modal("show");
+                if (mode == "sync") {
+                    $.ajax(
+                        { method: "GET", url: "Artikals/Sync", data: { id: id } })
+                        .done(function (msg) { $("#modal_sync").modal("hide"); }
+                        );
+                }
+                else if (mode == "stanje") {
+                    $.ajax(
+                        { method: "GET", url: "Artikals/Stanje", data: { id: id } })
+                        .done(function (msg) { $("#modal_sync").modal("hide"); }
+                        );
+                }
+            });
+        });
+    </script>
+}
+

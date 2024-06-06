@@ -1,0 +1,5 @@
+﻿***Lokal***
+Scaffold-DbContext "Server=(localdb)\MSSQLLocalDB;Database=B2B;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
+
+***Live baza***
+Scaffold-DbContext "Server=81.95.105.76;Database=e003186;User Id=e003186a;Password=xjMIJTHLbawGpus9;MultipleActiveResultSets=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
